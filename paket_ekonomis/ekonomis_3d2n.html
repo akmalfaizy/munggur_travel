@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paket Wisata Ekonommsi – Fun & Budget Trip Yogyakarta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./favicon_travine.png" type="image/x-icons" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f8f5f2;
+        color: #333;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Poppins", sans-serif;
+      }
+      .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+          url("https://source.unsplash.com/1600x900/?yogyakarta-heritage-luxury")
+            center/cover no-repeat;
+        color: white;
+        padding: 8rem 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .itinerary-card {
+        background-color: #fffaf0;
+        border-radius: 12px;
+        padding: 24px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+        height: 100%;
+      }
+      .itinerary-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(247, 168, 59, 0.3),
+          0 8px 10px -6px rgba(247, 168, 59, 0.1);
+      }
+      .day-header {
+        color: #e56012;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        border-bottom: 2px solid #e56012;
+        padding-bottom: 8px;
+      }
+
+      /* FIX: Hanging Indent yang sudah diperbaiki */
+      .itinerary-list {
+        padding-left: 1.5rem; /* Memberi ruang untuk bullet/disk */
+        list-style: disc;
+      }
+      .itinerary-list > li {
+        /* Menggunakan padding-left untuk mengimbangi list-style-position: outside */
+        padding-left: 0.25rem;
+        margin-left: 0;
+        text-indent: -0.5rem; /* Mengatur hanging indent */
+      }
+      .package-card {
+        background-color: #ffffff;
+        border: 1px solid #e5e7eb;
+        transition: all 0.3s ease;
+      }
+      .package-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(247, 168, 59, 0.2),
+          0 4px 6px -2px rgba(247, 168, 59, 0.1);
+        border-color: #f7a83b;
+      }
+      .nav-link:hover {
+        color: #f97316;
+      }
+      .footer-link:hover {
+        color: #fb923c;
+      }
+
+      /* CSS untuk Burger Menu Animation */
+      .burger-line {
+        transition: all 0.3s ease;
+      }
+      .burger-line.open:nth-child(1) {
+        transform: rotate(45deg) translate(0, 9px);
+      }
+      .burger-line.open:nth-child(2) {
+        opacity: 0;
+      }
+      .burger-line.open:nth-child(3) {
+        transform: rotate(-45deg) translate(0, -9px);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <nav
+      id="navbar"
+      class="bg-white shadow-md fixed top-0 w-full z-50 transition-all duration-300 rounded-b-xl"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="">
+            <a href="#" class="flex items-center">
+              <img
+                src="./icon_travine.png"
+                alt="Munggur Travel Logo"
+                class="h-12 w-auto"
+                style="filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))"
+              />
+            </a>
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="text-gray-700 nav-link transition rounded-lg px-2 py-1"
+              >Beranda</a
+            >
+            <a
+              href="#packages-section"
+              class="text-gray-700 nav-link transition rounded-lg px-2 py-1"
+              >Paket Wisata</a
+            >
+            <a
+              href="#about"
+              class="text-gray-700 nav-link transition rounded-lg px-2 py-1"
+              >Tentang Kami</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 nav-link transition rounded-lg px-2 py-1"
+              >Kontak</a
+            >
+          </div>
+          <div class="md:hidden">
+            <button id="burger-btn" class="focus:outline-none rounded-lg p-2">
+              <div class="w-6 h-6 flex flex-col justify-center">
+                <span
+                  class="burger-line w-full h-0.5 bg-gray-700 mb-1 rounded"
+                ></span>
+                <span
+                  class="burger-line w-full h-0.5 bg-gray-700 mb-1 rounded"
+                ></span>
+                <span
+                  class="burger-line w-full h-0.5 bg-gray-700 rounded"
+                ></span>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div
+          id="mobile-menu"
+          class="md:hidden hidden bg-white shadow-md rounded-b-xl"
+        >
+          <a
+            href="#home"
+            class="block px-4 py-2 text-gray-700 hover:bg-orange-100 rounded-lg"
+            >Beranda</a
+          >
+          <a
+            href="#packages-section"
+            class="block px-4 py-2 text-gray-700 hover:bg-orange-100 rounded-lg"
+            >Paket Wisata</a
+          >
+          <a
+            href="#about"
+            class="block px-4 py-2 text-gray-700 hover:bg-orange-100 rounded-lg"
+            >Tentang Kami</a
+          >
+          <a
+            href="#contact"
+            class="block px-4 py-2 text-gray-700 hover:bg-orange-100 rounded-lg"
+            >Kontak</a
+          >
+        </div>
+      </div>
+    </nav>
+    <main class="pt-20">
+      <section
+        class="hero-section text-center py-20 px-4 bg-gradient-to-b from-amber-700 to-white"
+      >
+        <div class="max-w-4xl mx-auto">
+          <h1 class="text-5xl font-extrabold mb-4 text-white md:text-5xl">
+            Fun & Budget Trip Yogyakarta
+          </h1>
+          <p class="text-xl font-medium text-white sm:text-2xl mt-4">
+            3 Hari 2 Malam | Budget Adventure, Friendship & Culture Exploration
+          </p>
+        </div>
+      </section>
+
+      <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div class="lg:col-span-1 flex justify-center">
+              <div
+                class="rounded-xl shadow-2xl overflow-hidden w-full max-w-lg aspect-square border-4 border-orange-200"
+              >
+                <img
+                  src="./ekonomis.png"
+                  alt="Luxury Heritage Escape Yogyakarta Package"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div class="lg:col-span-1">
+              <h2 class="text-4xl font-bold mb-6 text-orange-700">
+                🌟 Paket Wisata Ekonomis 🌟
+              </h2>
+              <p class="text-gray-700 leading-relaxed mb-6 text-lg">
+                Nikmati pengalaman tak terlupakan di Yogyakarta dengan paket
+                ekonomis
+                <span class="font-semibold text-orange-600"
+                  >Fun & Budget Trip</span
+                >.Paket wisata hemat dengan fasilitas standar, tetap
+                mengutamakan pengalaman berwisata yang seru, aman, dan penuh
+                keakraban. Peserta diajak menjelajahi keindahan alam dan budaya
+                Jogja tanpa harus mengeluarkan biaya besar.
+              </p>
+
+              <div class="mb-6 bg-orange-100 p-6 rounded-lg shadow-xl">
+                <h3 class="text-2xl font-semibold mb-3 mt-4 text-orange-800">
+                  🏨 Akomodasi & Transportasi
+                </h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                  <li>
+                    <span class="font-medium">Akomodasi:</span> Homestay / Guest
+                    House area Malioboro / Prawirotaman
+                  </li>
+                  <li>
+                    <span class="font-medium">Transportasi:</span> Bus
+                    pariwisata / minibus (AC, kapasitas sesuai peserta)
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-4xl font-bold text-center mb-12 text-orange-700">
+            🗓️ Itinerary Perjalanan Anda (3 Hari 2 Malam)
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="itinerary-card">
+              <h3 class="day-header">Hari 1: Welcome to Jogja!</h3>
+              <ul class="text-gray-700 space-y-2 text-sm itinerary-list">
+                <li>Penjemputan di Stasiun Lempuyangan / Bandara YIA.</li>
+                <li>Sarapan di warung lokal (mencicipi kuliner khas).</li>
+                <li>Kunjungan ke Titik Nol KM & Taman Pintar.</li>
+                <li>Makan siang di warung gudeg legendaris.</li>
+                <li>Sore di Malioboro untuk belanja dan menikmati suasana.</li>
+                <li>Kuliner malam di area Malioboro.</li>
+                <li>Check-in homestay.</li>
+              </ul>
+            </div>
+
+            <div class="itinerary-card">
+              <h3 class="day-header">Hari 2: Petualangan Alam & Selfie Spot</h3>
+              <ul class="text-gray-700 space-y-2 text-sm itinerary-list">
+                <li>Sarapan di homestay.</li>
+                <li>Kunjungan ke Hutan Pinus Pengger.</li>
+                <li>Menikmati pemandangan di Puncak Becici.</li>
+                <li>Makan siang sederhana di resto lokal.</li>
+                <li>
+                  Sore di HeHa Ocean View (spot foto dengan pemandangan laut).
+                </li>
+                <li>Menuju Pantai Parangtritis saat menjelang senja.</li>
+                <li>Makan malam di area pantai dengan Jagung Bakar.</li>
+                <li>Kembali ke penginapan.</li>
+              </ul>
+            </div>
+
+            <div class="itinerary-card">
+              <h3 class="day-header">Hari 3: Edukasi & Oleh-Oleh</h3>
+              <ul class="text-gray-700 space-y-2 text-sm itinerary-list">
+                <li>Sarapan pagi dan check-out.</li>
+                <li>
+                  Kunjungan ke Museum Ullen Sentalu (opsional jika tiket
+                  tersedia).
+                </li>
+                <li>Belanja oleh-oleh di Bakpia 25 & Kaos Dagadu.</li>
+                <li>Makan siang di lokal resto.</li>
+                <li>Diantar ke bandara / stasiun untuk kepulangan.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="border-orange-300" />
+
+      <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <h2 class="text-4xl font-bold mb-6 text-orange-700">
+                💼 Harga Paket Ekonomis
+              </h2>
+              <div class="space-y-4">
+                <div
+                  class="bg-blue-100 p-6 rounded-lg shadow-lg border-l-4 border-blue-600"
+                >
+                  <p class="text-gray-800 text-xl font-semibold">
+                    10–20 Orang:
+                  </p>
+                  <p class="text-orange-700 text-4xl font-extrabold">
+                    Rp 1.950.000
+                    <span class="text-xl font-normal text-gray-700">/ pax</span>
+                  </p>
+                </div>
+                <div
+                  class="bg-green-100 p-6 rounded-lg shadow-lg border-l-4 border-green-600"
+                >
+                  <p class="text-gray-800 text-xl font-semibold">
+                    21–30 Orang:
+                  </p>
+                  <p class="text-orange-700 text-4xl font-extrabold">
+                    Rp 1.750.000
+                    <span class="text-xl font-normal text-gray-700">/ pax</span>
+                  </p>
+                </div>
+                <div
+                  class="bg-purple-100 p-6 rounded-lg shadow-lg border-l-4 border-purple-600"
+                >
+                  <p class="text-gray-800 text-xl font-semibold">30 Orang:</p>
+                  <p class="text-orange-700 text-4xl font-extrabold">
+                    Rp 1.550.000
+                    <span class="text-xl font-normal text-gray-700">/ pax</span>
+                  </p>
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm italic mt-8">
+                *Harga estimasi per orang. Harga dapat berubah sewaktu-waktu.
+                Hubungi kami untuk penawaran terbaik.
+              </p>
+            </div>
+
+            <div>
+              <h2 class="text-4xl font-bold mb-6 text-orange-700">
+                Detail Inklusi & Eksklusi
+              </h2>
+
+              <div class="mb-8 p-4 bg-green-50 rounded-lg shadow-sm">
+                <h3
+                  class="text-2xl font-semibold mb-4 text-green-700 flex items-center"
+                >
+                  <svg
+                    class="w-8 h-8 mr-2 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    ></path>
+                  </svg>
+                  Sudah Termasuk
+                </h3>
+                <ul
+                  class="list-disc list-inside text-gray-700 text-lg space-y-2"
+                >
+                  <li>Akomodasi 2 malam (homestay / guest house)</li>
+                  <li>Transportasi bus / minibus full AC</li>
+                  <li>Tiket masuk wisata</li>
+                  <li>Makan 3x sehari (prasmanan sederhana)</li>
+                  <li>Air mineral selama perjalanan</li>
+                  <li>Tour leader / guide lokal</li>
+                  <li>Dokumentasi grup</li>
+                </ul>
+              </div>
+
+              <div class="p-4 bg-red-50 rounded-lg shadow-sm">
+                <h3
+                  class="text-2xl font-semibold mb-4 text-red-700 flex items-center"
+                >
+                  <svg
+                    class="w-8 h-8 mr-2 text-red-500"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2V9h2v5z"
+                    ></path>
+                  </svg>
+                  Tidak Termasuk
+                </h3>
+                <ul
+                  class="list-disc list-inside text-gray-700 text-lg space-y-2"
+                >
+                  <li>Tiket pesawat/kereta</li>
+                  <li>Pengeluaran pribadi (laundry, minibar, dll.)</li>
+                  <li>Tiket opsional/wahana tambahan</li>
+                  <li>Tips guide untuk driver/pemandu</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-4xl font-bold mb-8 text-orange-700">
+            🎁 Nilai Tambah Eksklusif
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 border-b-4 border-orange-500"
+            >
+              <svg
+                class="w-16 h-16 mx-auto mb-4 text-orange-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                Games & Ice Breaking
+              </h3>
+              <p class="text-gray-600">Aktivitas Selama Perjalanan</p>
+            </div>
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 border-b-4 border-orange-500"
+            >
+              <svg
+                class="w-16 h-16 mx-auto mb-4 text-orange-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 10l4.555-4.555A2 2 0 0121 7.086V18a2 2 0 01-2 2H5a2 2 0 01-2-2V7.086a2 2 0 013.445-1.441L9 10m-2 0l2 2m4-2l2 2"
+                ></path>
+              </svg>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                Sertifikat
+              </h3>
+              <p class="text-gray-600">Sertifikat Untuk Trip Partisipasi</p>
+            </div>
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 border-b-4 border-orange-500"
+            >
+              <svg
+                class="w-16 h-16 mx-auto mb-4 text-orange-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">Bonus</h3>
+              <p class="text-gray-600">
+                Diskon 10% untuk paket wisata berikutnya
+              </p>
+            </div>
+          </div>
+          <button
+            class="mt-12 bg-orange-700 text-white text-xl px-10 py-4 rounded-full font-bold hover:bg-orange-800 transition duration-300 shadow-xl book-btn"
+            data-package="Paket Luxury Heritage Escape"
+          >
+            Pesan Sekarang Juga!
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="bg-gray-800 text-white py-8 rounded-t-xl">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <a href="#" class="flex items-center">
+              <img
+                src="./icon_travine.png"
+                alt="Munggur Travel Logo"
+                class="h-12 w-auto"
+                style="filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))"
+              />
+            </a>
+            <p class="mb-2">Alamat: Jl. Malioboro, Yogyakarta</p>
+            <p class="mb-2">No. Telepon/WhatsApp: +62 123 456 789</p>
+            <p>Email: info@travine.id</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Navigasi</h3>
+            <ul>
+              <li class="mb-2">
+                <a href="#home" class="footer-link rounded-lg transition"
+                  >Beranda</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#packages-section"
+                  class="footer-link rounded-lg transition"
+                  >Paket Wisata</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#about" class="footer-link rounded-lg transition"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#contact" class="footer-link rounded-lg transition"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Ikuti Kami</h3>
+            <a
+              href="#"
+              class="text-orange-400 hover:text-white mr-4 rounded-lg transition"
+              >Instagram</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="bg-gray-900 text-white py-4 text-center rounded-b-xl">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p>&copy; 2025 Travine.id All Rights Reserved.</p>
+      </div>
+    </div>
+
+    <div
+      id="booking-modal"
+      class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center z-[100]"
+    >
+      <div
+        class="bg-white p-8 rounded-xl shadow-2xl max-w-lg w-full m-4 relative"
+      >
+        <button
+          id="close-modal"
+          class="absolute top-4 right-4 text-gray-500 hover:text-gray-900"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+        <h3 class="text-2xl font-bold mb-6 text-orange-600">
+          Formulir Pemesanan
+        </h3>
+        <form id="booking-form" class="space-y-4">
+          <div>
+            <label for="package" class="block text-sm font-medium text-gray-700"
+              >Paket Dipilih</label
+            >
+            <input
+              type="text"
+              id="package"
+              name="package"
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 bg-gray-50 cursor-not-allowed"
+              readonly
+              required
+            />
+          </div>
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700"
+              >Nama Lengkap</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3"
+              required
+            />
+          </div>
+          <div>
+            <label for="contact" class="block text-sm font-medium text-gray-700"
+              >No. Telepon/WhatsApp</label
+            >
+            <input
+              type="text"
+              id="contact"
+              name="contact"
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3"
+              required
+            />
+          </div>
+          <div>
+            <label for="date" class="block text-sm font-medium text-gray-700"
+              >Tanggal Perjalanan</label
+            >
+            <input
+              type="date"
+              id="date"
+              name="date"
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="participants"
+              class="block text-sm font-medium text-gray-700"
+              >Jumlah Peserta</label
+            >
+            <input
+              type="number"
+              id="participants"
+              name="participants"
+              min="1"
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3"
+              required
+            />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700"
+              >Pesan Tambahan (Opsional)</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="3"
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-orange-600 text-white py-3 rounded-md font-semibold hover:bg-orange-700 transition mt-6"
+          >
+            Kirim Pemesanan
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div
+      id="image-modal"
+      class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-[110] transition-opacity duration-300"
+    >
+      <div class="relative max-w-4xl w-full mx-auto p-4">
+        <button
+          id="close-image-modal"
+          class="absolute top-2 right-2 text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-75 transition"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+        <img
+          id="full-image-display"
+          src=""
+          alt="Gambar Detail"
+          class="max-h-[90vh] w-full object-contain rounded-lg shadow-2xl"
+        />
+        <p
+          id="image-caption"
+          class="text-white text-center mt-3 text-lg font-semibold"
+        ></p>
+      </div>
+    </div>
+
+    <script>
+      const packages = [
+        {
+          img: "https://source.unsplash.com/400x400/?borobudur-prambanan",
+          title: "Paket Candi Borobudur & Prambanan",
+          desc: "Jelajahi keajaiban candi dunia dengan pemandu ahli.",
+          price: "Rp 400.000",
+        },
+        {
+          img: "https://source.unsplash.com/400x400/?beach-yogyakarta",
+          title: "Paket Pantai Selatan",
+          desc: "Nikmati pasir putih dan ombak di pantai-pantai eksotis.",
+          price: "Rp 350.000",
+        },
+        {
+          img: "https://source.unsplash.com/400x400/?malioboro-yogyakarta",
+          title: "Paket Kota Yogyakarta",
+          desc: "Eksplorasi Malioboro, keraton, dan kuliner khas Jogja.",
+          price: "Rp 250.000",
+        },
+        {
+          img: "https://source.unsplash.com/400x400/?merapi-lava-tour",
+          title: "Paket Gunung Merapi",
+          desc: "Pendakian aman ke puncak gunung berapi aktif.",
+          price: "Rp 300.000",
+        },
+        {
+          img: "https://source.unsplash.com/400x400/?village-yogyakarta",
+          title: "Paket Desa Wisata",
+          desc: "Kunjungi desa-desa tradisional dengan budaya autentik.",
+          price: "Rp 200.000",
+        },
+        {
+          img: "https://source.unsplash.com/400x400/?culinary-yogyakarta",
+          title: "Paket Kuliner Jogja",
+          desc: "Rasakan cita rasa kuliner khas Yogyakarta.",
+          price: "Rp 150.000",
+        },
+        {
+          img: "https://source.unsplash.com/400x400/?batik-art-yogyakarta",
+          title: "Paket Seni dan Budaya",
+          desc: "Pelajari seni batik dan wayang kulit.",
+          price: "Rp 250.000",
+        },
+        {
+          img: "https://source.unsplash.com/400x400/?nature-river-yogyakarta",
+          title: "Paket Alam Liar",
+          desc: "Jelajahi hutan dan sungai di sekitar Jogja.",
+          price: "Rp 350.000",
+        },
+        {
+          img: "https://source.unsplash.com/400x400/?history-fort-yogyakarta",
+          title: "Paket Sejarah Jogja",
+          desc: "Kunjungi situs-situs bersejarah penting.",
+          price: "Rp 300.000",
+        },
+        {
+          img: "https://source.unsplash.com/400x400/?rafting-paragliding",
+          title: "Paket Petualangan",
+          desc: "Aktivitas ekstrem seperti rafting dan paralayang.",
+          price: "Rp 450.000",
+        },
+        {
+          img: "https://source.unsplash.com/400x400/?family-fun-yogyakarta",
+          title: "Paket Keluarga",
+          desc: "Wisata ramah keluarga dengan berbagai aktivitas.",
+          price: "Rp 400.000",
+        },
+        {
+          img: "https://source.unsplash.com/400x400/?romantic-dinner",
+          title: "Paket Romantis",
+          desc: "Liburan spesial untuk pasangan.",
+          price: "Rp 500.000",
+        },
+      ];
+
+      let currentIndex = 0;
+      const packagesPerLoad = 6;
+      const packageGrid = document.getElementById("package-grid");
+      const loadMoreBtn = document.getElementById("load-more-btn");
+      const burgerBtn = document.getElementById("burger-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const bookingModal = document.getElementById("booking-modal");
+      const closeModalBtn = document.getElementById("close-modal");
+      const bookingForm = document.getElementById("booking-form");
+      const imageModal = document.getElementById("image-modal");
+      const fullImageDisplay = document.getElementById("full-image-display");
+      const closeImageModalBtn = document.getElementById("close-image-modal");
+      const imageCaption = document.getElementById("image-caption");
+
+      // FUNGSI BARU: Buka Modal Gambar
+      window.openImageModal = (imageUrl, caption) => {
+        if (!imageModal || !fullImageDisplay) return;
+        fullImageDisplay.src = imageUrl;
+        imageCaption.textContent = caption;
+        imageModal.classList.remove("hidden");
+        imageModal.style.display = "flex";
+      };
+
+      // FUNGSI UTAMA: Membuat kartu paket
+      function createPackageCard(pkg) {
+        const card = document.createElement("div");
+        // Menggunakan kelas 'package-card' dari style
+        card.className =
+          "package-card rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300 ease-in-out border-2 border-transparent hover:border-orange-500";
+
+        card.innerHTML = `
+        <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+            <img 
+                src="${pkg.img}" 
+                alt="${pkg.title}" 
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('${pkg.img}', '${pkg.title}')"
+                onerror="this.onerror=null;this.src='https://via.placeholder.com/400x400?text=Gambar+Paket';"
+            >
+        </div>
+        <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900">${pkg.title}</h3>
+            <p class="text-gray-600 text-sm mb-4 h-10 overflow-hidden">${pkg.desc}</p>
+            <p class="text-3xl font-extrabold text-orange-700 mb-4">${pkg.price}</p>
+            <button class="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold block w-full hover:bg-orange-700 transition book-btn" data-package="${pkg.title}">
+                Pesan Sekarang
+            </button>
+        </div>
+    `;
+        return card;
+      }
+
+      // FUNGSI UTAMA: Memuat paket
+      function loadPackages() {
+        if (!packageGrid) return;
+        const endIndex = Math.min(
+          currentIndex + packagesPerLoad,
+          packages.length
+        );
+        for (let i = currentIndex; i < endIndex; i++) {
+          const card = createPackageCard(packages[i]);
+          packageGrid.appendChild(card);
+        }
+        currentIndex = endIndex;
+        if (currentIndex >= packages.length && loadMoreBtn) {
+          loadMoreBtn.style.display = "none";
+        }
+      }
+
+      // =========================================================
+      // EVENT LISTENERS
+      // =========================================================
+
+      // LOGIKA BURGER NAV
+      if (burgerBtn && mobileMenu) {
+        burgerBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+          burgerBtn
+            .querySelectorAll(".burger-line")
+            .forEach((line) => line.classList.toggle("open"));
+        });
+      }
+
+      // Memastikan semua paket dimuat saat halaman pertama kali dibuka
+      document.addEventListener("DOMContentLoaded", () => {
+        loadPackages();
+      });
+
+      // Event listener untuk tombol "Muat Lebih Banyak Paket"
+      if (loadMoreBtn) {
+        loadMoreBtn.addEventListener("click", loadPackages);
+      }
+
+      // Event listeners untuk Modal Gambar
+      if (closeImageModalBtn) {
+        closeImageModalBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          imageModal.classList.add("hidden");
+          imageModal.style.display = "none";
+        });
+      }
+
+      // Event listeners untuk Modal Pemesanan
+      document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("book-btn") && bookingModal) {
+          const packageName = e.target.getAttribute("data-package");
+          const packageInput = document.getElementById("package");
+          if (packageInput) {
+            packageInput.value = packageName;
+          }
+          bookingModal.classList.remove("hidden");
+          bookingModal.style.display = "flex";
+        }
+      });
+
+      if (closeModalBtn) {
+        closeModalBtn.addEventListener("click", () => {
+          bookingModal.classList.add("hidden");
+          bookingModal.style.display = "none";
+        });
+      }
+
+      if (bookingModal) {
+        bookingModal.addEventListener("click", (e) => {
+          if (e.target === bookingModal) {
+            bookingModal.classList.add("hidden");
+            bookingModal.style.display = "none";
+          }
+        });
+      }
+
+      if (bookingForm) {
+        bookingForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const formData = new FormData(bookingForm);
+          const data = Object.fromEntries(formData);
+          alert(
+            `Pemesanan berhasil!\nNama: ${data.name}\nKontak: ${data.contact}\nPaket: ${data.package}\nTanggal: ${data.date}\nPeserta: ${data.participants}\nPesan: ${data.message}`
+          );
+          bookingModal.classList.add("hidden");
+          bookingModal.style.display = "none";
+          bookingForm.reset();
+        });
+      }
+    </script>
+  </body>
+</html>

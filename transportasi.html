@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transportasi Travine</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="./src/img/favicon_travine.png"
+      type="image/x-icons"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .burger-line {
+        transition: all 0.3s ease;
+      }
+      .burger-line.open:nth-child(1) {
+        transform: rotate(45deg) translate(0, 9px);
+      }
+
+      .burger-line.open:nth-child(2) {
+        opacity: 0;
+      }
+
+      .burger-line.open:nth-child(3) {
+        transform: rotate(-45deg) translate(0, -9px);
+      }
+      /* Custom shadow for cards */
+      .card-shadow {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      /* Style untuk tombol aktif */
+      .toggle-btn-active {
+        background-color: #f97316; /* orange-600 */
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="bg-white shadow-md fixed top-0 w-full z-50 transition-all duration-300 rounded-b-xl"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="">
+            <a href="./index.html" class="flex items-center">
+              <img
+                src="./src/img/icon_travine.png"
+                alt="Munggur Travel Logo"
+                class="h-12 w-auto"
+                style="filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))"
+              />
+            </a>
+          </div>
+          <!-- Desktop Nav -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="/index.html#home"
+              class="text-gray-700 hover:text-orange-600 transition rounded-lg px-2 py-1"
+              >Beranda</a
+            >
+            <a
+              href="/index.html#tipe-paket"
+              class="text-gray-700 hover:text-orange-600 transition rounded-lg px-2 py-1"
+              >Paket Wisata</a
+            >
+            <a
+              href="/index.html#layanan"
+              class="text-gray-700 hover:text-orange-600 transition rounded-lg px-2 py-1"
+              >Layanan</a
+            >
+            <a
+              href="/index.html#contact"
+              class="text-gray-700 hover:text-orange-600 transition rounded-lg px-2 py-1"
+              >Kontak</a
+            >
+          </div>
+          <!-- Mobile Burger Menu -->
+          <div class="md:hidden">
+            <button id="burger-btn" class="focus:outline-none rounded-lg p-2">
+              <div class="w-6 h-6 flex flex-col justify-center">
+                <span
+                  class="burger-line w-full h-0.5 bg-gray-700 mb-1 rounded"
+                ></span>
+                <span
+                  class="burger-line w-full h-0.5 bg-gray-700 mb-1 rounded"
+                ></span>
+                <span
+                  class="burger-line w-full h-0.5 bg-gray-700 rounded"
+                ></span>
+              </div>
+            </button>
+          </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="md:hidden hidden bg-white shadow-md rounded-b-xl"
+        >
+          <a
+            href="/index.html#home"
+            class="block px-4 py-2 text-gray-700 hover:bg-orange-100 rounded-lg"
+            >Beranda</a
+          >
+          <a
+            href="/index.html#tipe-paket"
+            class="block px-4 py-2 text-gray-700 hover:bg-orange-100 rounded-lg"
+            >Paket Wisata</a
+          >
+          <a
+            href="/index.html#layanan"
+            class="block px-4 py-2 text-gray-700 hover:bg-orange-100 rounded-lg"
+            >Layanan</a
+          >
+          <a
+            href="/index.html#contact"
+            class="block px-4 py-2 text-gray-700 hover:bg-orange-100 rounded-lg"
+            >Kontak</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section
+      id="hero-section"
+      class="hero-section text-center py-20 px-4 bg-gradient-to-b from-amber-700 to-white min-h-screen flex items-center justify-center"
+    >
+      <div class="max-w-4xl mx-auto pt-16">
+        <p
+          class="text-sm font-semibold text-white bg-orange-800/80 inline-block px-4 py-1 mb-6 rounded-full uppercase tracking-widest shadow-lg"
+        >
+          🌟 Armada Premium | Sopir Berpengalaman 🌟
+        </p>
+
+        <h1 class="text-5xl font-extrabold mb-4 text-white md:text-6xl">
+          Sewa Transportasi
+        </h1>
+        <p class="text-xl font-medium text-white sm:text-2xl mt-4">
+          Pilihan Armada Terbaik untuk Perjalanan Anda di Jogja
+        </p>
+
+        <div
+          class="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4"
+        >
+          <a
+            href="#transportasi"
+            class="bg-orange-600 text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-orange-600 transition duration-300 text-lg transform hover:scale-105"
+          >
+            Lihat Semua Armada 🚗
+          </a>
+          <a
+            href="https://wa.me/nomorwhatsappanda"
+            target="_blank"
+            class="bg-orange-600 text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-orange-600 transition duration-300 text-lg transform hover:scale-105"
+          >
+            Chat Booking Cepat 💬
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="transportasi" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12 text-orange-600">
+          Pilihan Armada Kami 🚗💨
+        </h2>
+
+        <div class="space-y-8">
+          <div
+            class="bg-white rounded-xl card-shadow p-6 flex flex-col lg:flex-row items-center fade-in"
+          >
+            <div class="lg:w-1/3 w-full mb-6 lg:mb-0">
+              <h3 class="text-2xl font-bold mb-4 text-gray-800">
+                Sewa Camry Jogja
+              </h3>
+              <img
+                src="./src/img/camry.png"
+                alt="Toyota Camry"
+                class="w-full h-auto object-cover rounded-lg"
+              />
+            </div>
+            <div class="lg:w-2/3 w-full lg:pl-12">
+              <div class="flex space-x-4 mb-4">
+                <button
+                  data-car="camry"
+                  data-content="harga"
+                  class="toggle-btn bg-orange-100 text-orange-600 font-semibold py-2 px-6 rounded-lg transition hover:bg-orange-200 toggle-btn-active"
+                >
+                  HARGA SEWA
+                </button>
+                <button
+                  data-car="camry"
+                  data-content="fasilitas"
+                  class="toggle-btn bg-gray-100 text-gray-600 font-semibold py-2 px-6 rounded-lg transition hover:bg-gray-200"
+                >
+                  FASILITAS
+                </button>
+              </div>
+
+              <div id="camry-harga" class="content-box">
+                <h4 class="text-3xl font-extrabold mb-4 text-orange-600">
+                  Harga Mulai Rp. 1.200.000
+                </h4>
+                <ul class="text-lg space-y-2">
+                  <li class="flex justify-between border-b pb-1">
+                    <span>6 Jam:</span>
+                    <span class="font-semibold text-gray-800"
+                      >Rp 1.200.000</span
+                    >
+                  </li>
+                  <li class="flex justify-between border-b pb-1">
+                    <span>12 Jam:</span>
+                    <span class="font-semibold text-gray-800"
+                      >Rp 1.600.000</span
+                    >
+                  </li>
+                  <li class="flex justify-between pb-1">
+                    <span>Fullday:</span>
+                    <span class="font-semibold text-gray-800"
+                      >Rp 1.800.000</span
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div id="camry-fasilitas" class="content-box hidden">
+                <h4 class="text-xl font-bold mb-4 text-gray-800">
+                  Fasilitas Camry
+                </h4>
+                <div class="grid grid-cols-2 gap-x-6 gap-y-3">
+                  <p class="flex items-center">
+                    <span class="text-orange-500 mr-2">✔️</span> Sopir
+                    Profesional
+                  </p>
+                  <p class="flex items-center">
+                    <span class="text-orange-500 mr-2">✔️</span> AC Dingin
+                  </p>
+                  <p class="flex items-center">
+                    <span class="text-orange-500 mr-2">✔️</span> Kapasitas 4
+                    Penumpang
+                  </p>
+                  <p class="flex items-center">
+                    <span class="text-orange-500 mr-2">✔️</span> Audio Premium
+                  </p>
+                  <p class="flex items-center">
+                    <span class="text-orange-500 mr-2">✔️</span> Mobil Mewah &
+                    Bersih
+                  </p>
+                  <p class="flex items-center">
+                    <span class="text-orange-500 mr-2">✔️</span> Air Mineral
+                  </p>
+                </div>
+              </div>
+
+              <div class="mt-6 lg:max-w-md">
+                <div
+                  class="flex justify-center lg:justify-start space-x-4 mb-3"
+                >
+                  <button
+                    data-type="include"
+                    data-car="Camry"
+                    class="open-modal-btn bg-blue-500 text-white font-semibold py-3 px-4 sm:px-8 rounded-lg hover:bg-blue-600 transition flex-1"
+                  >
+                    INCLUDE
+                  </button>
+                  <button
+                    data-type="exclude"
+                    data-car="Camry"
+                    class="open-modal-btn bg-red-500 text-white font-semibold py-3 px-4 sm:px-8 rounded-lg hover:bg-red-600 transition flex-1"
+                  >
+                    EXCLUDE
+                  </button>
+                </div>
+                <div class="flex justify-center lg:justify-start">
+                  <a
+                    href="#booking-section"
+                    data-car="Camry"
+                    class="booking-link bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-orange-700 transition w-full text-center"
+                  >
+                    BOOKING
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl card-shadow p-6 flex flex-col lg:flex-row items-center fade-in"
+          >
+            <div class="lg:w-1/3 w-full mb-6 lg:mb-0">
+              <h3 class="text-2xl font-bold mb-4 text-gray-800">
+                Sewa Hiace Jogja
+              </h3>
+              <img
+                src="./src/img/hiace.png"
+                alt="Toyota Hiace"
+                class="w-full h-auto object-cover rounded-lg"
+              />
+            </div>
+            <div class="lg:w-2/3 w-full lg:pl-12">
+              <div class="flex space-x-4 mb-4">
+                <button
+                  data-car="hiace"
+                  data-content="harga"
+                  class="toggle-btn bg-orange-100 text-orange-600 font-semibold py-2 px-6 rounded-lg transition hover:bg-orange-200 toggle-btn-active"
+                >
+                  HARGA SEWA
+                </button>
+                <button
+                  data-car="hiace"
+                  data-content="fasilitas"
+                  class="toggle-btn bg-gray-100 text-gray-600 font-semibold py-2 px-6 rounded-lg transition hover:bg-gray-200"
+                >
+                  FASILITAS
+                </button>
+              </div>
+
+              <div id="hiace-harga" class="content-box">
+                <h4 class="text-3xl font-extrabold mb-4 text-orange-600">
+                  Harga Mulai Rp. 900.000
+                </h4>
+                <ul class="text-lg space-y-2">
+                  <li class="flex justify-between border-b pb-1">
+                    <span>12 Jam:</span>
+                    <span class="font-semibold text-gray-800">Rp 900.000</span>
+                  </li>
+                  <li class="flex justify-between pb-1">
+                    <span>Fullday:</span>
+                    <span class="font-semibold text-gray-800"
+                      >Rp 1.200.000</span
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div id="hiace-fasilitas" class="content-box hidden">
+                <h4 class="text-xl font-bold mb-4 text-gray-800">
+                  Fasilitas Hiace
+                </h4>
+                <div class="grid grid-cols-2 gap-x-6 gap-y-3">
+                  <p class="flex items-center">
+                    <span class="text-orange-500 mr-2">📅</span> Tahun 2020 Up
+                  </p>
+                  <p class="flex items-center">
+                    <span class="text-orange-500 mr-2">💺</span> 7 - 14 Seat
+                  </p>
+                  <p class="flex items-center">
+                    <span class="text-orange-500 mr-2">📺</span> DVD & Audio
+                    System
+                  </p>
+                  <p class="flex items-center">
+                    <span class="text-orange-500 mr-2">💧</span> Air Mineral
+                  </p>
+                  <p class="flex items-center">
+                    <span class="text-orange-500 mr-2">❄️</span> AC Ducting
+                    Dingin
+                  </p>
+                  <p class="flex items-center">
+                    <span class="text-orange-500 mr-2">🔌</span> Charger
+                  </p>
+                </div>
+              </div>
+
+              <div class="mt-6 lg:max-w-md">
+                <div
+                  class="flex justify-center lg:justify-start space-x-4 mb-3"
+                >
+                  <button
+                    data-type="include"
+                    data-car="Hiace"
+                    class="open-modal-btn bg-blue-500 text-white font-semibold py-3 px-4 sm:px-8 rounded-lg hover:bg-blue-600 transition flex-1"
+                  >
+                    INCLUDE
+                  </button>
+                  <button
+                    data-type="exclude"
+                    data-car="Hiace"
+                    class="open-modal-btn bg-red-500 text-white font-semibold py-3 px-4 sm:px-8 rounded-lg hover:bg-red-600 transition flex-1"
+                  >
+                    EXCLUDE
+                  </button>
+                </div>
+                <div class="flex justify-center lg:justify-start">
+                  <a
+                    href="#booking-section"
+                    data-car="Hiace"
+                    class="booking-link bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-orange-700 transition w-full text-center"
+                  >
+                    BOOKING
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-t border-gray-200 max-w-7xl mx-auto" />
+
+    <section id="booking-section" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12 text-orange-600">
+          Formulir Booking & Info Rental Mobil 📝
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div class="lg:col-span-1 bg-white p-8 rounded-xl shadow-lg fade-in">
+            <h3 class="text-2xl font-bold mb-6 border-b pb-2 text-orange-600">
+              Mengapa Sewa Mobil Di Munggur Travel?
+            </h3>
+            <p class="mb-6 text-gray-700">
+              Munggur Travel mempermudah pemesanan rental mobil Yogyakarta
+              dengan booking online dan dapat pembayaran dengan mudah dan aman.
+              Kami memiliki banyak pilihan armada sesuai kebutuhan Anda dengan
+              mobil terbaik, nyaman, dan driver berpengalaman yang siap menjadi
+              pemandu Anda selama di Jogja. Sewa mobil untuk keperluan
+              perjalanan bisnis, liburan, wisuda, atau acara pernikahan
+              percayakan kepada kami.
+            </p>
+            <ul class="space-y-3 mb-8 text-gray-700">
+              <li class="flex items-center">
+                <span class="text-green-500 mr-2">✅</span> Ramah dan Nyaman
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 mr-2">✅</span> Respon Cepat 24 Jam
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 mr-2">✅</span> Kendaraan Terawat
+                dan Hemat
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 mr-2">✅</span> Sopir Berwawasan dan
+                Profesional
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 mr-2">✅</span> Mobil Pengganti
+                (jika diperlukan)
+              </li>
+            </ul>
+
+            <h3 class="text-2xl font-bold mb-4 border-b pb-2 text-orange-600">
+              Ketentuan Rental Mobil
+            </h3>
+            <ul class="space-y-3 text-sm text-gray-700">
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2 font-bold">✔️</span>
+                <span
+                  >Ketentuan Sewa: Disesuaikan dengan jenis mobil dan durasi
+                  pilihan Anda.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2 font-bold">✔️</span>
+                <span
+                  >Harga tarif sewa mobil di atas include sewa mobil, driver,
+                  dan BBM.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2 font-bold">✔️</span>
+                <span
+                  >Harga tarif sewa mobil di atas belum termasuk HTM tempat
+                  wisata, biaya parkir, biaya makan driver, dan biaya penginapan
+                  driver bila menginap di luar kota Jogja.</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-2 bg-white p-8 rounded-xl shadow-lg fade-in">
+            <div class="bg-orange-600 text-white p-4 rounded-t-lg mb-6">
+              <h3 class="text-xl font-bold">Booking Rental Mobil</h3>
+            </div>
+            <p class="mb-6 text-gray-700">
+              Isi nama, no. telp, dan alamat email agar kami mudah menghubungi
+              Anda.
+            </p>
+
+            <form id="rental-booking-form" class="space-y-5">
+              <div>
+                <label
+                  for="nama-booking"
+                  class="block text-sm font-medium text-gray-700"
+                  >Nama *</label
+                >
+                <input
+                  type="text"
+                  id="nama-booking"
+                  name="nama"
+                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  for="telp-wa"
+                  class="block text-sm font-medium text-gray-700"
+                  >No. Telp / WA *</label
+                >
+                <input
+                  type="tel"
+                  id="telp-wa"
+                  name="telp_wa"
+                  placeholder="Cth: 08123456789"
+                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  for="armada-mobil"
+                  class="block text-sm font-medium text-gray-700"
+                  >Armada / Mobil *</label
+                >
+                <select
+                  id="armada-mobil"
+                  name="armada_mobil"
+                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500 bg-white"
+                  required
+                >
+                  <option value="Avanza">Avanza</option>
+                  <option value="Camry">Camry (Rp 1.200.000 / 6 Jam)</option>
+                  <option value="Hiace">Hiace (Rp 900.000 / 12 Jam)</option>
+                  <option value="Elf Short">Elf Short</option>
+                  <option value="Bus Medium">Bus Medium</option>
+                  <option value="Bus VIP">Bus/Van VIP</option>
+                  <option value="Other">Disesuaikan kebutuhan segmen</option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  for="durasi-sewa"
+                  class="block text-sm font-medium text-gray-700"
+                  >Durasi Sewa *</label
+                >
+                <select
+                  id="durasi-sewa"
+                  name="durasi_sewa"
+                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500 bg-white"
+                  required
+                >
+                  <option value="Full Day">Full Day</option>
+                  <option value="6 Jam">6 Jam</option>
+                  <option value="12 Jam">12 Jam</option>
+                  <option value="Custom">Durasi Lain (Tulis di Catatan)</option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  for="tanggal-sewa"
+                  class="block text-sm font-medium text-gray-700"
+                  >Tanggal Sewa *</label
+                >
+                <input
+                  type="date"
+                  id="tanggal-sewa"
+                  name="tanggal_sewa"
+                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  for="catatan"
+                  class="block text-sm font-medium text-gray-700"
+                  >Catatan Tambahan (Opsional)</label
+                >
+                <textarea
+                  id="catatan"
+                  name="catatan"
+                  rows="3"
+                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
+                  placeholder="Contoh: Kami butuh antar-jemput dari bandara jam 09.00."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-orange-600 text-white font-semibold py-3 rounded-md hover:bg-orange-700 transition"
+              >
+                Kirim Permintaan Booking
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white py-8 rounded-t-xl">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Kolom 1: MunggurTravel, Alamat, No Telpon, Email -->
+          <div>
+            <a href="#" class="flex items-center mb-4">
+              <img
+                src="./src/img/icon_travine.png"
+                alt="Travine Travel Logo"
+                class="h-12 w-auto"
+                style="filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))"
+              />
+            </a>
+            <p class="mb-2">Alamat: Jl. Malioboro, Yogyakarta</p>
+            <p class="mb-2">No. Telepon/WhatsApp: +62 123 456 789</p>
+            <p>Email: info@travine.id</p>
+          </div>
+          <!-- Kolom 2: Navigasi -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Navigasi</h3>
+            <ul>
+              <li class="mb-2">
+                <a
+                  href="./index.html"
+                  class="hover:text-orange-400 rounded-lg transition"
+                  >Beranda</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="./index.html#tipe-paket"
+                  class="hover:text-orange-400 rounded-lg transition"
+                  >Paket Wisata</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="./index.html#layanan"
+                  class="hover:text-orange-400 rounded-lg transition"
+                  >Layanan</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="./index.html#contact"
+                  class="hover:text-orange-400 rounded-lg transition"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Kolom 3: Ikuti Kami -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Ikuti Kami</h3>
+            <a
+              href="#"
+              class="text-orange-400 hover:text-white mr-4 rounded-lg transition"
+              >Instagram</a
+            >
+            <!-- Tambahkan ikon sosial lainnya jika perlu -->
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Copyright -->
+    <div class="bg-gray-900 text-white py-4 text-center rounded-b-xl">
+      <p>&copy; 2025 travine.id All Rights Reserved.</p>
+    </div>
+
+    <div
+      id="include-exclude-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 overflow-y-auto"
+      style="display: none"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div
+        class="bg-white rounded-xl shadow-2xl w-full max-w-lg m-4 overflow-hidden transform transition-all sm:my-8 sm:align-middle"
+        onclick="event.stopPropagation()"
+      >
+        <div
+          id="modal-header"
+          class="px-6 py-4 flex justify-between items-center"
+        >
+          <h3 id="modal-title" class="text-xl font-bold text-white"></h3>
+          <button
+            id="close-include-exclude-modal"
+            class="text-white text-3xl font-bold leading-none hover:text-gray-200 transition"
+            aria-label="Tutup"
+          >
+            &times;
+          </button>
+        </div>
+
+        <div class="p-6">
+          <ul id="modal-list" class="space-y-3 text-gray-700"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // =========================================================
+      // VARIABEL GLOBAL
+      // =========================================================
+      const burgerBtn = document.getElementById("burger-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const rentalBookingForm = document.getElementById("rental-booking-form");
+      const armadaMobilSelect = document.getElementById("armada-mobil");
+
+      // Modal Include/Exclude
+      const includeExcludeModal = document.getElementById(
+        "include-exclude-modal"
+      );
+      const closeIncludeExcludeModalBtn = document.getElementById(
+        "close-include-exclude-modal"
+      );
+      const modalTitle = document.getElementById("modal-title");
+      const modalHeader = document.getElementById("modal-header");
+      const modalList = document.getElementById("modal-list");
+
+      // Data Include & Exclude
+      const carDetails = {
+        Camry: {
+          include: [
+            "Sewa Mobil Camry",
+            "Driver Profesional",
+            "Bahan Bakar Minyak (BBM) selama perjalanan",
+            "Air Mineral",
+          ],
+          exclude: [
+            "Tiket masuk objek wisata (HTM)",
+            "Biaya parkir",
+            "Biaya tol",
+            "Biaya makan dan penginapan driver (di luar kota Jogja)",
+          ],
+        },
+        Hiace: {
+          include: [
+            "Sewa Mobil Hiace (7-14 Seat)",
+            "Driver Berpengalaman",
+            "Bahan Bakar Minyak (BBM) selama perjalanan",
+            "Air Mineral dan Charger",
+          ],
+          exclude: [
+            "Tiket masuk objek wisata (HTM)",
+            "Biaya parkir",
+            "Biaya tol",
+            "Biaya makan dan penginapan driver (di luar kota Jogja)",
+          ],
+        },
+        // Tambahkan mobil lain di sini
+      };
+
+      // =========================================================
+      // FUNGSI UTAMA
+      // =========================================================
+
+      // Toggle Burger Menu (TIDAK BERUBAH)
+      if (burgerBtn && mobileMenu) {
+        burgerBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+          burgerBtn
+            .querySelectorAll(".burger-line")
+            .forEach((line) => line.classList.toggle("open"));
+        });
+      }
+
+      // Fungsi untuk menutup modal Include/Exclude
+      const closeIncludeExcludeModal = () => {
+        includeExcludeModal.classList.add("hidden");
+        includeExcludeModal.style.display = "none";
+      };
+
+      // Fungsi untuk menampilkan konten Harga/Fasilitas
+      function toggleContent(carId, contentType) {
+        const contentBoxes = document.querySelectorAll(
+          `#${carId}-harga, #${carId}-fasilitas`
+        );
+        const toggleButtons = document.querySelectorAll(
+          `.toggle-btn[data-car="${carId}"]`
+        );
+
+        contentBoxes.forEach((box) => {
+          box.classList.add("hidden");
+        });
+
+        toggleButtons.forEach((btn) => {
+          btn.classList.remove(
+            "bg-orange-100",
+            "text-orange-600",
+            "toggle-btn-active"
+          );
+          btn.classList.add("bg-gray-100", "text-gray-600");
+        });
+
+        const activeBox = document.getElementById(`${carId}-${contentType}`);
+        const activeBtn = document.querySelector(
+          `.toggle-btn[data-car="${carId}"][data-content="${contentType}"]`
+        );
+
+        if (activeBox) {
+          activeBox.classList.remove("hidden");
+        }
+        if (activeBtn) {
+          activeBtn.classList.add(
+            "bg-orange-100",
+            "text-orange-600",
+            "toggle-btn-active"
+          );
+          activeBtn.classList.remove("bg-gray-100", "text-gray-600");
+        }
+      }
+
+      // =========================================================
+      // EVENT LISTENERS
+      // =========================================================
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Inisialisasi: set tombol HARGA SEWA aktif secara default
+        document
+          .querySelectorAll('.toggle-btn[data-content="harga"]')
+          .forEach((btn) => {
+            btn.classList.add(
+              "toggle-btn-active",
+              "bg-orange-100",
+              "text-orange-600"
+            );
+            btn.classList.remove("bg-gray-100", "text-gray-600");
+          });
+        document
+          .querySelectorAll('.content-box:not([id$="-harga"])')
+          .forEach((box) => {
+            box.classList.add("hidden");
+          });
+      });
+
+      // Event listener untuk tombol Harga Sewa / Fasilitas
+      document.querySelectorAll(".toggle-btn").forEach((button) => {
+        button.addEventListener("click", function () {
+          const carId = this.getAttribute("data-car");
+          const contentType = this.getAttribute("data-content");
+          toggleContent(carId, contentType);
+        });
+      });
+
+      // Event listener untuk tombol INCLUDE / EXCLUDE
+      document.querySelectorAll(".open-modal-btn").forEach((button) => {
+        button.addEventListener("click", function () {
+          const type = this.getAttribute("data-type");
+          const carName = this.getAttribute("data-car");
+          const carId = carName.toLowerCase();
+          const dataList = carDetails[carName] ? carDetails[carName][type] : [];
+
+          // Set Judul Modal
+          modalTitle.textContent = `${type.toUpperCase()} Sewa ${carName}`;
+
+          // Set Warna Header Modal
+          if (type === "include") {
+            modalHeader.className =
+              "px-6 py-4 bg-blue-500 flex justify-between items-center rounded-t-xl";
+          } else {
+            modalHeader.className =
+              "px-6 py-4 bg-red-500 flex justify-between items-center rounded-t-xl";
+          }
+
+          // Isi List
+          modalList.innerHTML = "";
+          dataList.forEach((item) => {
+            const li = document.createElement("li");
+            li.className = "flex items-start";
+            const icon =
+              type === "include"
+                ? '<span class="text-blue-500 mr-2 font-bold">✅</span>'
+                : '<span class="text-red-500 mr-2 font-bold">❌</span>';
+            li.innerHTML = `${icon} <span>${item}</span>`;
+            modalList.appendChild(li);
+          });
+
+          // Tampilkan Modal
+          includeExcludeModal.classList.remove("hidden");
+          includeExcludeModal.style.display = "flex";
+        });
+      });
+
+      // Tutup Modal Include/Exclude
+      if (closeIncludeExcludeModalBtn) {
+        closeIncludeExcludeModalBtn.addEventListener(
+          "click",
+          closeIncludeExcludeModal
+        );
+      }
+      if (includeExcludeModal) {
+        includeExcludeModal.addEventListener("click", (e) => {
+          if (e.target === includeExcludeModal) {
+            closeIncludeExcludeModal();
+          }
+        });
+      }
+
+      // Event listener untuk tombol BOOKING pada card
+      document.querySelectorAll(".booking-link").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          const carName = this.getAttribute("data-car");
+          const selectedOption = Array.from(armadaMobilSelect.options).find(
+            (opt) => opt.value === carName || opt.textContent.includes(carName)
+          );
+
+          // Set nilai pada dropdown
+          if (selectedOption) {
+            armadaMobilSelect.value = selectedOption.value;
+          } else {
+            // Jika mobil tidak ada di pilihan, set ke pilihan "Other" atau pilihan pertama
+            armadaMobilSelect.selectedIndex = 0;
+          }
+
+          // Pindah ke bagian booking
+          setTimeout(() => {
+            document
+              .getElementById("booking-section")
+              .scrollIntoView({ behavior: "smooth" });
+          }, 10); // sedikit delay agar scroll lebih mulus
+        });
+      });
+
+      // Event listener untuk Submit Form (Kirim via WhatsApp)
+      if (rentalBookingForm) {
+        rentalBookingForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const formData = new FormData(rentalBookingForm);
+          const data = Object.fromEntries(formData);
+
+          // Buat Pesan WhatsApp
+          const message =
+            `Halo Munggur Travel, saya ingin booking rental mobil:\n\n` +
+            `*Nama:* ${data.nama}\n` +
+            `*No. WA:* ${data.telp_wa}\n` +
+            `*Armada:* ${data.armada_mobil}\n` +
+            `*Durasi:* ${data.durasi_sewa}\n` +
+            `*Tanggal Sewa:* ${data.tanggal_sewa}\n` +
+            `*Catatan:* ${data.catatan || "-"}\n\n` +
+            `Mohon konfirmasi ketersediaan dan total biayanya. Terima kasih.`;
+
+          const waLink = `https://wa.me/62123456789?text=${encodeURIComponent(
+            message
+          )}`;
+
+          // Buka WhatsApp
+          window.open(waLink, "_blank");
+
+          // Opsional: reset form setelah submit
+          // rentalBookingForm.reset();
+        });
+      }
+
+      // Hide/Show Mobile Menu
+      // Tambahkan event listener untuk tautan di mobile menu agar menu tertutup setelah diklik
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          burgerBtn
+            .querySelectorAll(".burger-line")
+            .forEach((line) => line.classList.remove("open"));
+        });
+      });
+    </script>
+  </body>
+</html>

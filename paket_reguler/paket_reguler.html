@@ -3,16 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travine Tour</title>
+    <title>Paket Reguler</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="icon"
-      href="./src/img/favicon_travine.png"
-      type="image/x-icons"
-    />
+    <link rel="icon" href="./favicon_travine.png" type="image/x-icons" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
@@ -61,8 +57,8 @@
           <div class="">
             <a href="#" class="flex items-center">
               <img
-                src="./src/img/icon_travine.png"
-                alt="Munggur Travel Logo"
+                src="./icon_travine.png"
+                alt="Travine Travel Logo"
                 class="h-12 w-auto"
                 style="filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))"
               />
@@ -76,14 +72,14 @@
               >Beranda</a
             >
             <a
-              href="#tipe-paket"
+              href="#packages"
               class="text-gray-700 hover:text-orange-600 transition rounded-lg px-2 py-1"
               >Paket Wisata</a
             >
             <a
-              href="#layanan"
+              href="#about"
               class="text-gray-700 hover:text-orange-600 transition rounded-lg px-2 py-1"
-              >Layanan</a
+              >Tentang Kami</a
             >
             <a
               href="#contact"
@@ -119,14 +115,14 @@
             >Beranda</a
           >
           <a
-            href="#tipe-paket"
+            href="#packages"
             class="block px-4 py-2 text-gray-700 hover:bg-orange-100 rounded-lg"
             >Paket Wisata</a
           >
           <a
-            href="#layanan"
+            href="#about"
             class="block px-4 py-2 text-gray-700 hover:bg-orange-100 rounded-lg"
-            >Layanan</a
+            >Tentang Kami</a
           >
           <a
             href="#contact"
@@ -137,226 +133,113 @@
       </div>
     </nav>
 
-    <!-- Hero Section 1 -->
-    <section
-      id="home"
-      class="relative bg-cover bg-center h-screen flex items-center justify-center rounded-b-xl overflow-hidden"
-      style="background-image: url('./src/img/img_tour.png')"
-    >
-      <div class="absolute inset-0 bg-black bg-opacity-50 rounded-b-xl"></div>
-      <div class="relative text-center text-white px-4 fade-in">
-        <h1 class="text-4xl md:text-6xl font-bold mb-4">
-          Jelajahi Keindahan Abadi Yogyakarta
-        </h1>
-        <p class="text-lg md:text-xl mb-8">
-          Temukan paket wisata terbaik di Daerah Istimewa Yogyakarta, dari candi
-          kuno hingga pantai indah. Kami siap membawa Anda dalam petualangan
-          budaya dan alam yang tak terlupakan.
-        </p>
-      </div>
-    </section>
-
     <!-- Recommended/Diskon Package Section -->
-    <section class="py-16 bg-white" id="tipe-paket">
+    <section class="py-16 mt-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h3 class="text-2xl font-bold text-center mt-12 mb-10 text-gray-800">
-          Pilih Tipe Paket Anda
-        </h3>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <a
-            href="./paket_premium/paket_premium.html"
-            class="relative rounded-xl shadow-lg overflow-hidden group h-64 block"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?fit=crop&w=800&q=80"
-              alt="Paket Premium"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 group-hover:bg-opacity-60"
-            ></div>
-
-            <div class="absolute inset-0 flex items-center justify-center p-6">
-              <h4 class="text-white text-3xl font-bold text-center shadow-lg">
-                Paket Premium
-              </h4>
-            </div>
-          </a>
-
-          <a
-            href="./paket_reguler/paket_reguler.html"
-            class="relative rounded-xl shadow-lg overflow-hidden group h-64 block"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?fit=crop&w=800&q=80"
-              alt="Paket Reguler"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 group-hover:bg-opacity-60"
-            ></div>
-
-            <div class="absolute inset-0 flex items-center justify-center p-6">
-              <h4 class="text-white text-3xl font-bold text-center shadow-lg">
-                Paket Reguler
-              </h4>
-            </div>
-          </a>
-
-          <a
-            href="./paket_ekonomis/paket_ekonomis.html"
-            class="relative rounded-xl shadow-lg overflow-hidden group h-64 block"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?fit=crop&w=800&q=80"
-              alt="Paket Ekonomis"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 group-hover:bg-opacity-60"
-            ></div>
-
-            <div class="absolute inset-0 flex items-center justify-center p-6">
-              <h4 class="text-white text-3xl font-bold text-center shadow-lg">
-                Paket Ekonomis
-              </h4>
-            </div>
-          </a>
-
-          <a
-            href="./paket_custom/paket_custom.html"
-            class="relative rounded-xl shadow-lg overflow-hidden group h-64 block"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?fit=crop&w=800&q=80"
-              alt="Paket Custom"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 group-hover:bg-opacity-60"
-            ></div>
-
-            <div class="absolute inset-0 flex items-center justify-center p-6">
-              <h4 class="text-white text-3xl font-bold text-center shadow-lg">
-                Paket Custom
-              </h4>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Supporting Hero/CTA Section -->
-    <section class="py-16 bg-orange-600 text-white rounded-xl mx-4">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <img
-          src="./src/img/img_adventure.png"
-          alt="Adventure"
-          class="w-full h-64 object-cover rounded-xl mb-8"
-        />
-        <h2 class="text-3xl font-bold mb-4">
-          Rencanakan Liburan Impian Anda Sekarang!
+        <h2 class="text-3xl font-bold text-center mb-12 text-orange-600">
+          Paket Wisata Reguler
         </h2>
-        <p class="text-lg mb-4">
-          Dapatkan penawaran terbaik dan pengalaman tak terlupakan di
-          Yogyakarta.
-        </p>
-        <!-- <a
-          href="#packages"
-          class="bg-white text-orange-600 px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition"
-          >Lihat Semua Paket</a
-        > -->
-      </div>
-    </section>
-
-    <section id="layanan" class="py-20 bg-gray-100 rounded-2xl">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h3 class="text-2xl font-bold text-center mb-10 text-gray-800">
-          Jelajahi Layanan Kami
-        </h3>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-          <a
-            href="./destinasi.html"
-            class="relative rounded-xl shadow-lg overflow-hidden group h-64 block"
-          >
-            <img
-              src="./src/img/merapi.png"
-              alt="Pilihan Destinasi Wisata"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 group-hover:bg-opacity-60"
-            ></div>
-
-            <div class="absolute inset-0 flex items-center justify-center p-6">
-              <h4 class="text-white text-3xl font-bold text-center shadow-lg">
-                Destinasi
-              </h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./reguler.png"
+                alt="Paket 1 Hari 2 Malam Reguler"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./reguler.png', 'Paket Reguler 1 Hari 2 Malam')"
+              />
             </div>
-          </a>
 
-          <a
-            href="./akomodasi.html"
-            class="relative rounded-xl shadow-lg overflow-hidden group h-64 block"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?fit=crop&w=800&q=80"
-              alt="Pilihan Akomodasi"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 group-hover:bg-opacity-60"
-            ></div>
-
-            <div class="absolute inset-0 flex items-center justify-center p-6">
-              <h4 class="text-white text-3xl font-bold text-center shadow-lg">
-                Akomodasi
-              </h4>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                Paket 1 Hari 2 Malam
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Jelajahi Jogja Selama 1 Hari 2 Malam.
+              </p>
+              <p class="text-lg font-bold text-red-500 line-through">
+                Rp 500.000
+              </p>
+              <p class="text-2xl font-bold text-orange-600">Rp 400.000</p>
+              <a href="./reguler_3d2n.html"
+                ><button
+                  class="mt-4 bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                >
+                  Lihat Detail >
+                </button></a
+              >
             </div>
-          </a>
+          </div>
 
-          <a
-            href="./transportasi.html"
-            class="relative rounded-xl shadow-lg overflow-hidden group h-64 block"
-          >
-            <img
-              src="./src/img/transportasi.png"
-              alt="Pilihan Transportasi"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 group-hover:bg-opacity-60"
-            ></div>
-
-            <div class="absolute inset-0 flex items-center justify-center p-6">
-              <h4 class="text-white text-3xl font-bold text-center shadow-lg">
-                Transportasi
-              </h4>
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./reguler.png"
+                alt="Paket Reguler 2 Hari 3 Malam"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./reguler.png', 'Paket Reguler 2 Hari 3 Malam')"
+              />
             </div>
-          </a>
+
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                Paket 2 Hari 3 Malam
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Nikmati Jogja Selama 2 Hari 3 Malam.
+              </p>
+              <p class="text-lg font-bold text-red-500 line-through">
+                Rp 950.000
+              </p>
+              <p class="text-2xl font-bold text-orange-600">Rp 750.000</p>
+              <a href="./reguler_3d2n.html"
+                ><button
+                  class="mt-4 bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                  data-package="Paket Pantai Selatan"
+                >
+                  Lihat Detail >
+                </button></a
+              >
+            </div>
+          </div>
+
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./reguler.png"
+                alt="Paket 3 Hari 4 Malam Reguler"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./reguler.png', 'Paket Reguler 3 Hari 4 Malam')"
+              />
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                Paket 3 Hari 4 Malam
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Eksplorasi Malioboro, keraton, dan kuliner khas Jogja.
+              </p>
+              <p class="text-lg font-bold text-red-500 line-through">
+                Rp 1.000.000
+              </p>
+              <p class="text-2xl font-bold text-orange-600">Rp 850.000</p>
+              <a href="./reguler_3d2n.html"
+                ><button
+                  class="mt-4 bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                  data-package="Paket Kota Yogyakarta"
+                >
+                  Lihat Detail >
+                </button></a
+              >
+            </div>
+          </div>
         </div>
-        <!-- <h2 class="text-3xl font-bold text-center mb-12 text-orange-600">
-          Semua Paket Wisata
-        </h2>
-        <div
-          id="package-grid"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        ></div>
-        <div class="text-center mt-12">
-          <button
-            id="load-more-btn"
-            class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-700 transition"
-          >
-            Tampilkan Lebih Banyak
-          </button>
-        </div> -->
       </div>
     </section>
 
     <!-- Why Choose Us Section -->
-    <section id="layanan" class="py-16 bg-white">
+    <section id="about" class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold text-center mb-12 text-orange-600">
           Mengapa Memilih Kami?
@@ -412,7 +295,7 @@
           <div>
             <a href="#" class="flex items-center mb-4">
               <img
-                src="./src/img/icon_travine.png"
+                src="./icon_travine.png"
                 alt="Travine Travel Logo"
                 class="h-12 w-auto"
                 style="filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))"
@@ -435,16 +318,16 @@
               </li>
               <li class="mb-2">
                 <a
-                  href="#tipe-paket"
+                  href="#packages"
                   class="hover:text-orange-400 rounded-lg transition"
                   >Paket Wisata</a
                 >
               </li>
               <li class="mb-2">
                 <a
-                  href="#layanan"
+                  href="#about"
                   class="hover:text-orange-400 rounded-lg transition"
-                  >Layanan</a
+                  >Tentang Kami</a
                 >
               </li>
               <li class="mb-2">
@@ -472,9 +355,166 @@
 
     <!-- Copyright -->
     <div class="bg-gray-900 text-white py-4 text-center rounded-b-xl">
-      <p>&copy; 2025 travine.id All Rights Reserved.</p>
+      <p>&copy; 2025 Travine.id All Rights Reserved.</p>
     </div>
 
+    <!-- Pop-up Form Modal -->
+    <div
+      id="booking-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 overflow-y-auto"
+      style="display: none"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div
+        class="bg-white rounded-xl shadow-2xl w-full max-w-lg m-4 overflow-hidden transform transition-all sm:my-8 sm:align-middle"
+        onclick="event.stopPropagation()"
+      >
+        <div class="px-6 py-4 bg-orange-600 flex justify-between items-center">
+          <h3 class="text-xl font-bold text-white">
+            Form Pemesanan Paket Wisata
+          </h3>
+          <button
+            id="close-modal"
+            class="text-white text-3xl font-bold leading-none hover:text-gray-200 transition"
+            aria-label="Tutup"
+          >
+            &times;
+          </button>
+        </div>
+
+        <div class="p-6 max-h-[80vh] overflow-y-auto">
+          <form id="booking-form" class="space-y-4">
+            <div>
+              <label
+                for="package"
+                class="block text-sm font-medium text-gray-700"
+                >Paket yang Dipilih</label
+              >
+              <input
+                type="text"
+                id="package"
+                name="package"
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 bg-gray-50 cursor-default"
+                readonly
+                required
+              />
+            </div>
+
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700"
+                >Nama Lengkap</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Masukkan nama Anda"
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
+                required
+              />
+            </div>
+
+            <div>
+              <label
+                for="contact"
+                class="block text-sm font-medium text-gray-700"
+                >Kontak (No. WA Aktif)</label
+              >
+              <input
+                type="text"
+                id="contact"
+                name="contact"
+                placeholder="Cth: 08123456789"
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="date" class="block text-sm font-medium text-gray-700"
+                >Tanggal Keberangkatan</label
+              >
+              <input
+                type="date"
+                id="date"
+                name="date"
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
+                required
+              />
+            </div>
+
+            <div>
+              <label
+                for="participants"
+                class="block text-sm font-medium text-gray-700"
+                >Jumlah Peserta</label
+              >
+              <input
+                type="number"
+                id="participants"
+                name="participants"
+                min="1"
+                placeholder="Min. 1 orang"
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
+                required
+              />
+            </div>
+
+            <div>
+              <label
+                for="message"
+                class="block text-sm font-medium text-gray-700"
+                >Pesan Tambahan (Opsional)</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="3"
+                placeholder="Contoh: Kami butuh antar-jemput dari bandara."
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-green-600 text-white font-semibold py-3 rounded-md hover:bg-green-700 transition"
+            >
+              Kirim Pemesanan via WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image Modal Package -->
+    <div
+      id="image-modal"
+      class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50 transition-opacity duration-300"
+      onclick="this.classList.add('hidden')"
+    >
+      <div
+        class="relative max-w-6xl max-h-full mx-auto p-4"
+        onclick="event.stopPropagation()"
+      >
+        <button
+          id="close-image-modal"
+          class="absolute top-4 right-4 text-white text-3xl font-bold p-2 z-50 bg-black bg-opacity-50 rounded-full hover:bg-opacity-75 transition"
+        >
+          &times;
+        </button>
+        <img
+          id="full-image-display"
+          src=""
+          alt=""
+          class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+        />
+        <div
+          id="image-caption"
+          class="text-white text-center mt-3 text-lg font-semibold"
+        ></div>
+      </div>
+    </div>
     <script>
       const packages = [
         {

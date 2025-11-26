@@ -18,8 +18,7 @@
       body {
         font-family: "Poppins", sans-serif;
       }
-      /* Custom transitions for smooth content entry */
-      .fade-in {
+      / Jeep Custom transitions for smooth content entry Jeep/ .fade-in {
         animation: fadeIn 0.5s ease-in-out;
       }
       @keyframes fadeIn {
@@ -176,37 +175,52 @@
       </div>
     </section>
 
-    <!-- Recommended/Diskon Package Section -->
     <section id="destinasi" class="py-24 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold text-center mb-12 text-orange-600">
-          ✨ Destinasi Wisata Jogja
+          ✨ Destinasi Wisata Jogja dengan VW Safari
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
             <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
               <img
-                src="./src/img/borobudur_prambanan.png"
-                alt="Paket Candi Borobudur & Prambanan"
+                src="./src/img/vw_safari_kuto.png"
+                alt="VW Safari Iconic Heritage Kuto"
                 class="absolute inset-0 w-full h-full object-cover cursor-pointer"
-                onclick="openImageModal('./src/img/borobudur_prambanan.png', 'Paket Candi Borobudur & Prambanan')"
+                onclick="openImageModal('./src/img/vw_safari_kuto.png', 'VW Safari Iconic Heritage Kuto')"
               />
             </div>
 
             <div class="p-6">
               <h3 class="text-xl font-semibold mb-2 text-gray-800">
-                Destinasi Candi
+                VW Safari Kuto (Iconic Heritage Kota)
               </h3>
-              <p class="text-gray-600 mb-4">
-                Jelajahi candi-candi jogja dengan pemandu ahli.
+              <p class="text-gray-600 mb-4 h-12 overflow-hidden">
+                Jelajahi ikon-ikon kota Jogja seperti Tugu, Malioboro, dan
+                Keraton dengan VW Klasik.
               </p>
-              <p class="text-lg font-bold text-red-500 line-through">
-                Rp 500.000
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 750.000 / Unit
               </p>
-              <p class="text-2xl font-bold text-orange-600">Rp 400.000</p>
+
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-kuto')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+
               <button
-                class="mt-4 bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
-                data-package="Paket Candi Borobudur & Prambanan"
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="VW Safari Kuto"
               >
                 Booking
               </button>
@@ -216,27 +230,43 @@
           <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
             <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
               <img
-                src="./src/img/pantai_selatan.png"
-                alt="Paket Pantai Selatan"
+                src="./src/img/vw_safari_candi.png"
+                alt="VW Safari Iconic Heritage Candi"
                 class="absolute inset-0 w-full h-full object-cover cursor-pointer"
-                onclick="openImageModal('./src/img/pantai_selatan.png', 'Paket Pantai Selatan')"
+                onclick="openImageModal('./src/img/vw_safari_candi.png', 'VW Safari Iconic Heritage Candi')"
               />
             </div>
 
             <div class="p-6">
               <h3 class="text-xl font-semibold mb-2 text-gray-800">
-                Destinasi Pantai Selatan
+                VW Safari Candi (Iconic Heritage Candi)
               </h3>
-              <p class="text-gray-600 mb-4">
-                Nikmati pasir putih dan ombak di pantai-pantai eksotis.
+              <p class="text-gray-600 mb-4 h-12 overflow-hidden">
+                Menyusuri keindahan Candi Plaosan, Sojiwan, dan Tebing Breksi
+                dengan pemandangan desa.
               </p>
-              <p class="text-lg font-bold text-red-500 line-through">
-                Rp 450.000
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 750.000 / Unit
               </p>
-              <p class="text-2xl font-bold text-orange-600">Rp 350.000</p>
+
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-candi')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+
               <button
-                class="mt-4 bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
-                data-package="Paket Pantai Selatan"
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="VW Safari Candi"
               >
                 Booking
               </button>
@@ -246,29 +276,459 @@
           <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
             <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
               <img
-                src="./src/img/kota_jogja.png"
-                alt="Paket Kota Yogyakarta"
+                src="./src/img/vw_safari_pantai.png"
+                alt="VW Safari Iconic Nature Gumuk Pasir Dan Pantai"
                 class="absolute inset-0 w-full h-full object-cover cursor-pointer"
-                onclick="openImageModal('./src/img/kota_jogja.png', 'Paket Kota Yogyakarta')"
+                onclick="openImageModal('./src/img/vw_safari_pantai.png', 'VW Safari Iconic Nature Gumuk Pasir Dan Pantai')"
               />
             </div>
 
             <div class="p-6">
               <h3 class="text-xl font-semibold mb-2 text-gray-800">
-                Destinasi Kota Yogyakarta
+                VW Safari Pantai & Gumuk Pasir
               </h3>
-              <p class="text-gray-600 mb-4">
-                Eksplorasi Malioboro, keraton, dan kuliner khas Jogja.
+              <p class="text-gray-600 mb-4 h-12 overflow-hidden">
+                Menikmati keindahan Gumuk Pasir, JLS, dan Pantai Parangkusumo
+                dengan sensasi Jeepadventure Jeep.
               </p>
-              <p class="text-lg font-bold text-red-500 line-through">
-                Rp 300.000
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 750.000 / Unit
               </p>
-              <p class="text-2xl font-bold text-orange-600">Rp 250.000</p>
+
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-pantai')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+
               <button
-                class="mt-4 bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
-                data-package="Paket Kota Yogyakarta"
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="VW Safari Pantai & Gumuk Pasir"
               >
                 Booking
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./src/img/vw_safari_nanggulan.png"
+                alt="VW Safari Iconic Nature Nanggulan"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/vw_safari_nanggulan.png', 'VW Safari Iconic Nature Nanggulan')"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                VW Safari Nanggulan (Iconic Nature)
+              </h3>
+              <p class="text-gray-600 mb-4 h-12 overflow-hidden">
+                Menikmati pemandangan sawah, Nyiur Kelapa, hingga Menoreh View
+                Resto di Kulon Progo.
+              </p>
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 750.000 / Unit
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-nanggulan')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+              <button
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="VW Safari Nanggulan"
+              >
+                Booking
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./src/img/vw_borobudur_happy.png"
+                alt="VW Safari Happy Borobudur"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/vw_borobudur_happy.png', 'VW Safari Happy Borobudur')"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                Happy Borobudur
+              </h3>
+              <p class="text-gray-600 mb-4 h-12 overflow-hidden text-sm">
+                Trip singkat (1.5 Jam), jelajah desa dan 1 kunjungan UMKM.
+              </p>
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 400.000 / Unit
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-borobudur-happy')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas-vw-borobudur')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+              <button
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="VW Borobudur Happy"
+              >
+                Booking
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./src/img/vw_borobudur_beauty.png"
+                alt="VW Safari Beauty Borobudur"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/vw_borobudur_beauty.png', 'VW Safari Beauty Borobudur')"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                Beauty Borobudur
+              </h3>
+              <p class="text-gray-600 mb-4 h-12 overflow-hidden text-sm">
+                Trip 2 Jam, jelajah desa, dilengkapi dengan 2 kunjungan UMKM.
+              </p>
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 500.000 / Unit
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-borobudur-beauty')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas-vw-borobudur')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+              <button
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="VW Borobudur Beauty"
+              >
+                Booking
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./src/img/vw_borobudur_excellent.png"
+                alt="VW Safari Excellent Borobudur"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/vw_borobudur_excellent.png', 'VW Safari Excellent Borobudur')"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block bg-red-100 text-orange-600 text-xs font-semibold px-3 py-1 rounded-full mb-3"
+              >
+                Rekomendasi
+              </span>
+              <h3 class="text-2xl font-bold mb-2 text-gray-800">
+                Excellent Borobudur
+              </h3>
+              <p class="text-gray-600 mb-4 h-12 overflow-hidden text-sm">
+                Trip 2.5 Jam, mencakup Candi Pawon dan 2 kunjungan UMKM.
+              </p>
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 550.000 / Unit
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-borobudur-excellent')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas-vw-borobudur')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+              <button
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="VW Borobudur Excellent"
+              >
+                Booking
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./src/img/vw_borobudur_exotic.png"
+                alt="VW Safari Exotic Borobudur"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/vw_borobudur_exotic.png', 'VW Safari Exotic Borobudur')"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                Exotic Borobudur
+              </h3>
+              <p class="text-gray-600 mb-4 h-12 overflow-hidden text-sm">
+                Trip 3 Jam, 1 Destinasi Pilihan, 2 UMKM, spot foto dan jelajah
+                desa.
+              </p>
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 650.000 / Unit
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-borobudur-exotic')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas-vw-borobudur')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+              <button
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="VW Borobudur Exotic"
+              >
+                Booking
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./src/img/vw_borobudur_wonderful.png"
+                alt="VW Safari Wonderfull Borobudur"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/vw_borobudur_wonderful.png', 'VW Safari Wonderfull Borobudur')"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block bg-pink-100 text-pink-800 text-xs font-semibold px-3 py-1 rounded-full mb-3"
+              >
+                Terlengkap
+              </span>
+              <h3 class="text-2xl font-bold mb-2 text-gray-800">
+                Wonderfull Borobudur
+              </h3>
+              <p class="text-gray-600 mb-4 h-12 overflow-hidden text-sm">
+                Trip terpanjang (4 Jam), 2 Destinasi Pilihan, 2 UMKM, dan
+                jelajah desa.
+              </p>
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 750.000 / Unit
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-borobudur-wonderful')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas-vw-borobudur')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+              <button
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="VW Borobudur Wonderful"
+              >
+                Booking
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="modal-fasilitas-vw-borobudur"
+            class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+          >
+            <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+              <h3 class="text-2xl font-bold mb-4 text-orange-600">
+                ⭐ Fasilitas Paket VW Safari Borobudur
+              </h3>
+              <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li>Unit VW Safari (1 Unit VW, kapasitas 4 tamu dewasa)</li>
+                <li>Supir yang berpengalaman</li>
+                <li>BBM (Bahan Bakar Minyak)</li>
+                <li>
+                  Durasi Trip Bervariasi (Mulai dari 1.5 Jam hingga 4 Jam,
+                  sesuai paket yang dipilih)
+                </li>
+                <li>
+                  Antar – Jemput Titik Kumpul (Sesuai Permintaan Tamu di area
+                  Borobudur)
+                </li>
+                <li class="font-bold text-red-500 mt-3">
+                  ❌ Catatan: Parkir dan Tiket Masuk Destinasi Wisata (Termasuk
+                  Candi Borobudur/Pawon/Mendut) Tidak Termasuk .
+                </li>
+              </ul>
+              <button
+                onclick="closeModal('modal-fasilitas-vw-borobudur')"
+                class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition"
+              >
+                Tutup
+              </button>
+            </div>
+          </div>
+          <div
+            id="modal-rute-borobudur-happy"
+            class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+          >
+            <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+              <h3 class="text-2xl font-bold mb-4 text-orange-600">
+                🗺️ Rute Happy Borobudur (1.5 Jam)
+              </h3>
+              <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li>Durasi: 1,5 Jam</li>
+                <li>1 Kunjungan UMKM (Usaha Mikro, Kecil, dan Menengah)</li>
+                <li>Jelajah Desa dan Spot Foto Pilihan</li>
+              </ul>
+              <button
+                onclick="closeModal('modal-rute-borobudur-happy')"
+                class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition"
+              >
+                Tutup
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="modal-rute-borobudur-beauty"
+            class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+          >
+            <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+              <h3 class="text-2xl font-bold mb-4 text-orange-600">
+                🗺️ Rute Beauty Borobudur (2 Jam)
+              </h3>
+              <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li>Durasi: 2 Jam</li>
+                <li>2 Kunjungan UMKM</li>
+                <li>Jelajah Desa dan Spot Foto Pilihan</li>
+              </ul>
+              <button
+                onclick="closeModal('modal-rute-borobudur-beauty')"
+                class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition"
+              >
+                Tutup
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="modal-rute-borobudur-excellent"
+            class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+          >
+            <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+              <h3 class="text-2xl font-bold mb-4 text-orange-600">
+                🗺️ Rute Excellent Borobudur (2.5 Jam)
+              </h3>
+              <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li>Durasi: 2,5 Jam</li>
+                <li>2 Kunjungan UMKM</li>
+                <li>1 Kunjungan Candi Pawon</li>
+                <li>Jelajah Desa dan Spot Foto Pilihan</li>
+              </ul>
+              <button
+                onclick="closeModal('modal-rute-borobudur-excellent')"
+                class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition"
+              >
+                Tutup
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="modal-rute-borobudur-exotic"
+            class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+          >
+            <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+              <h3 class="text-2xl font-bold mb-4 text-orange-600">
+                🗺️ Rute Exotic Borobudur (3 Jam)
+              </h3>
+              <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li>Durasi: 3 Jam</li>
+                <li>
+                  1 Destinasi Wisata Pilihan (seperti Candi Mendut / Candi Pawon
+                  / Punthuk Setumbu, dll.)
+                </li>
+                <li>2 Kunjungan UMKM</li>
+                <li>Spot Foto dan Jelajah Desa</li>
+              </ul>
+              <button
+                onclick="closeModal('modal-rute-borobudur-exotic')"
+                class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition"
+              >
+                Tutup
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="modal-rute-borobudur-wonderful"
+            class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+          >
+            <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+              <h3 class="text-2xl font-bold mb-4 text-orange-600">
+                🗺️ Rute Wonderfull Borobudur (4 Jam)
+              </h3>
+              <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li>Durasi: 4 Jam (Terpanjang)</li>
+                <li>2 Destinasi Wisata Pilihan</li>
+                <li>2 Kunjungan UMKM</li>
+                <li>Spot Foto dan Jelajah Desa</li>
+              </ul>
+              <button
+                onclick="closeModal('modal-rute-borobudur-wonderful')"
+                class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition"
+              >
+                Tutup
               </button>
             </div>
           </div>
@@ -276,197 +736,1353 @@
       </div>
     </section>
 
-    <section id="booking-section" class="py-16 bg-gray-50">
+    <!-- Section Jeep -->
+    <section id="jeep-gumuk-pasir" class="py-24 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold text-center mb-12 text-orange-600">
-          Formulir Booking Tour 📝
+          🔥 Petualangan Jeep Gumuk Pasir Parangkusumo
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./src/img/jeep_view_pantai.png"
+                alt="Jeep Wisata Gumuk Pasir Trip 1"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/jeep_view_pantai.png', 'Jeep Wisata Gumuk Pasir Trip 1')"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                TRIP 1: Jeep Pantai View
+              </h3>
+              <p class="text-gray-600 mb-4 h-12 overflow-hidden text-sm">
+                Paket Ekonomis! Kunjungan ke Basecamp Gumuk Pasir dan 5 Pantai
+                sekitar.
+              </p>
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 400.000 / Jeep
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-jeep-1')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas-jeep')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+              <button
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="Jeep Gumuk Pasir TRIP 1"
+              >
+                Booking
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./src/img/jeep_gumuk_pasir.png"
+                alt="Jeep Wisata Gumuk Pasir Trip 2 Off Road"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/jeep_gumuk_pasir.png', 'Jeep Wisata Gumuk Pasir Trip 2 Off Road')"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full mb-3"
+              >
+                Rekomendasi
+              </span>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                TRIP 2: Off Road Seru
+              </h3>
+              <p class="text-gray-600 mb-4 h-12 overflow-hidden text-sm">
+                Sensasi Off Road di Gumuk Pasir ditambah kunjungan ke 5 Pantai
+                (lebih lengkap dari Trip 1).
+              </p>
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 600.000 / Jeep
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-jeep-2')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas-jeep')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+              <button
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="Jeep Gumuk Pasir TRIP 2"
+              >
+                Booking
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./src/img/jeep_all_in.png"
+                alt="Jeep Wisata Gumuk Pasir Trip 3 All-in"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/jeep_all_in.png', 'Jeep Wisata Gumuk Pasir Trip 3 All-in')"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full mb-3"
+              >
+                Paling Lengkap
+              </span>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                TRIP 3: All-in Adventure
+              </h3>
+              <p class="text-gray-600 mb-4 h-12 overflow-hidden text-sm">
+                Paket terpanjang: Off Road, track sawah, Laguna, dan kunjungan
+                ke 9 destinasi.
+              </p>
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 800.000 / Jeep
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-jeep-3')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas-jeep')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+              <button
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="Jeep Gumuk Pasir TRIP 3"
+              >
+                Booking
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <blockquote
+          class="mt-12 p-4 bg-yellow-50 border-l-4 border-yellow-500 text-yellow-800 rounded-lg"
+        >
+          Catatan: Harga paket trip adalah untuk 1 Jeep , dengan kapasitas
+          maksimal 4 orang dewasa . Sudah termasuk free dokumentasi foto/video .
+        </blockquote>
+        <div
+          id="modal-fasilitas-jeep"
+          class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+        >
+          <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+            <h3 class="text-2xl font-bold mb-4 text-orange-600">
+              ⭐ Fasilitas Paket Jeep Gumuk Pasir
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+              <li>Unit Jeep (1 Unit, kapasitas 4 tamu dewasa)</li>
+              <li>Supir berpengalaman (sekaligus Jeepguide Jeep)</li>
+              <li>BBM (Bahan Bakar Minyak)</li>
+              <li>Free Dokumentasi Foto/Video</li>
+              <li>Durasi Trip (Bervariasi sesuai paket)</li>
+              <li class="font-bold text-red-500 mt-3">
+                ❌ Catatan: Harga belum termasuk Tiket Masuk destinasi wisata.
+              </li>
+            </ul>
+            <button
+              onclick="closeModal('modal-fasilitas-jeep')"
+              class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+        <div
+          id="modal-rute-jeep-1"
+          class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+        >
+          <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+            <h3 class="text-2xl font-bold mb-4 text-orange-600">
+              📍 Rute Jeep TRIP 1 (Rp 400.000)
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>Basecamp Gumuk Pasir</li>
+              <li>Pantai Cemara Sewu</li>
+              <li>Pantai Barcan</li>
+              <li>Pantai Parangkusumo</li>
+              <li>Pantai Parangtritis</li>
+              <li>Pantai Parang Endog</li>
+            </ul>
+            <p class="mt-3 text-sm italic">
+              Termasuk: Free Dokumentasi Foto/Video.
+            </p>
+            <button
+              onclick="closeModal('modal-rute-jeep-1')"
+              class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="modal-rute-jeep-2"
+          class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+        >
+          <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+            <h3 class="text-2xl font-bold mb-4 text-orange-600">
+              💥 Rute Jeep TRIP 2 (Rp 600.000)
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>Basecamp Gumuk Pasir</li>
+              <li class="font-bold text-red-600">Off Road Gumuk Pasir</li>
+              <li>Pantai Cemara Sewu</li>
+              <li>Pantai Barcan</li>
+              <li>Pantai Parangkusumo</li>
+              <li>Pantai Parangtritis</li>
+              <li>Pantai Parang Endog</li>
+            </ul>
+            <p class="mt-3 text-sm italic">
+              Termasuk: Free Dokumentasi Foto/Video.
+            </p>
+            <button
+              onclick="closeModal('modal-rute-jeep-2')"
+              class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="modal-rute-jeep-3"
+          class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+        >
+          <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+            <h3 class="text-2xl font-bold mb-4 text-orange-600">
+              👑 Rute Jeep TRIP 3 (Rp 800.000)
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>Basecamp Gumuk Pasir</li>
+              <li class="font-bold text-red-600">Off Road Gumuk Pasir</li>
+              <li>Track Persawahan</li>
+              <li>Laguna View</li>
+              <li>Pantai Depok</li>
+              <li>Pantai Tal Wolu</li>
+              <li>Pantai Cemara Sewu</li>
+              <li>Pantai Barcan</li>
+              <li>Pantai Widuri</li>
+              <li>Pantai Parangkusumo</li>
+              <li>Pantai Parangtritis</li>
+              <li>Pantai Parang Endog</li>
+            </ul>
+            <p class="mt-3 text-sm italic">
+              Termasuk: Free Dokumentasi Foto/Video.
+            </p>
+            <button
+              onclick="closeModal('modal-rute-jeep-3')"
+              class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="jeep-merapi" class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12 text-orange-600">
+          🌋 Petualangan Jeep Lava Tour Merapi
         </h2>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <div class="lg:col-span-1 bg-white p-8 rounded-xl shadow-lg">
-            <h3 class="text-2xl font-bold mb-6 border-b pb-2 text-orange-600">
-              Mengapa Munggur Travel untuk Wisata Anda?
-            </h3>
-            <p class="mb-6 text-gray-700">
-              Kami mempermudah rencana perjalanan wisata Anda di Yogyakarta.
-              Berikan rincian penumpang dan destinasi Anda, dan biarkan kami
-              yang mencarikan armada terbaik, nyaman, dan efisien.
-            </p>
-            <ul class="space-y-3 mb-8 text-gray-700">
-              <li class="flex items-center">
-                <span class="text-green-500 mr-2">✅</span> Driver Berwawasan
-                Lokal & Profesional
-              </li>
-              <li class="flex items-center">
-                <span class="text-green-500 mr-2">✅</span> Penentuan Armada
-                yang Paling Efisien
-              </li>
-              <li class="flex items-center">
-                <span class="text-green-500 mr-2">✅</span> Armada Terawat,
-                Nyaman, dan Hemat BBM
-              </li>
-              <li class="flex items-center">
-                <span class="text-green-500 mr-2">✅</span> Fleksibel untuk
-                Rencana Destinasi Anda
-              </li>
-            </ul>
-
-            <h3 class="text-2xl font-bold mb-4 border-b pb-2 text-orange-600">
-              Ketentuan Rental Wisata
-            </h3>
-            <ul class="space-y-3 text-sm text-gray-700">
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2 font-bold">✔️</span>
-                <span>Harga sudah termasuk: Mobil, Driver, dan BBM.</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-red-500 mr-2 font-bold">❌</span>
-                <span
-                  >Harga belum termasuk: Tiket Masuk (HTM) objek wisata, biaya
-                  Parkir, biaya Makan Driver, dan biaya Penginapan Driver (bila
-                  menginap di luar kota Jogja).</span
-                >
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2 font-bold">✔️</span>
-                <span
-                  >Durasi "Full Day" maksimal 12 jam atau sampai pukul
-                  23:00.</span
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="lg:col-span-2 bg-white p-8 rounded-xl shadow-lg">
-            <div class="bg-orange-600 text-white p-4 rounded-t-lg mb-6">
-              <h3 class="text-xl font-bold">Detail Booking Tour</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./src/img/merapi_short.png"
+                alt="Jeep Merapi Paket Short+"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/merapi_short.png', 'Jeep Merapi Paket Short+')"
+              />
             </div>
-            <p class="mb-6 text-gray-700">
-              Mohon lengkapi data pemesan, total penumpang, dan rincian wisata
-              Anda.
-            </p>
-
-            <form id="rental-booking-form" class="space-y-5">
-              <div>
-                <label
-                  for="nama-booking"
-                  class="block text-sm font-medium text-gray-700"
-                  >Nama Lengkap *</label
-                >
-                <input
-                  type="text"
-                  id="nama-booking"
-                  name="nama"
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
-                  required
-                />
-              </div>
-
-              <div>
-                <label
-                  for="telp-wa"
-                  class="block text-sm font-medium text-gray-700"
-                  >No. Telp / WA Aktif *</label
-                >
-                <input
-                  type="tel"
-                  id="telp-wa"
-                  name="telp_wa"
-                  placeholder="Cth: 08123456789"
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
-                  required
-                />
-              </div>
-
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                <div>
-                  <label
-                    for="dewasa"
-                    class="block text-sm font-medium text-gray-700"
-                    >Jumlah Dewasa *</label
-                  >
-                  <input
-                    type="number"
-                    id="dewasa"
-                    name="jumlah_dewasa"
-                    placeholder="Cth: 2"
-                    min="1"
-                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    for="anak"
-                    class="block text-sm font-medium text-gray-700"
-                    >Jumlah Anak (di bawah 10 th)</label
-                  >
-                  <input
-                    type="number"
-                    id="anak"
-                    name="jumlah_anak"
-                    placeholder="Cth: 1"
-                    min="0"
-                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
-                    value="0"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  for="tanggal-sewa"
-                  class="block text-sm font-medium text-gray-700"
-                  >Tanggal Mulai Sewa *</label
-                >
-                <input
-                  type="date"
-                  id="tanggal-sewa"
-                  name="tanggal_sewa"
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
-                  required
-                />
-              </div>
-
-              <div>
-                <label
-                  for="destinasi"
-                  class="block text-sm font-medium text-gray-700"
-                  >Rencana Destinasi Wisata *</label
-                >
-                <textarea
-                  id="destinasi"
-                  name="destinasi"
-                  rows="3"
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
-                  placeholder="Contoh: Tour Gunungkidul (Pantai Indrayanti, Goa Pindul) dan City Tour (Keraton, Malioboro)."
-                  required
-                ></textarea>
-              </div>
-
-              <div>
-                <label
-                  for="catatan"
-                  class="block text-sm font-medium text-gray-700"
-                  >Catatan Tambahan (Opsional)</label
-                >
-                <textarea
-                  id="catatan"
-                  name="catatan"
-                  rows="2"
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
-                  placeholder="Contoh: Kami butuh penjemputan dari Stasiun Tugu jam 08.00."
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                class="w-full bg-orange-600 text-white font-semibold py-3 rounded-md hover:bg-orange-700 transition"
+            <div class="p-6">
+              <span
+                class="inline-block bg-gray-300 text-gray-800 text-xs font-semibold px-3 py-1 rounded-full mb-3"
               >
-                Kirim Permintaan Booking & Destinasi
+                Short Trip
+              </span>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                TRIP 1: Paket Short+
+              </h3>
+              <p class="text-gray-600 mb-4 text-sm">
+                Trip singkat yang pas untuk pemula/keluarga . Kunjungan ke
+                Musium Mini, Batu Alien/The Lost World Park, dan Manuver Kali
+                Kuning.
+              </p>
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 400.000 / Jeep
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-merapi-1')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas-merapi')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+              <button
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="Jeep Merapi Short+"
+              >
+                Booking
               </button>
-            </form>
+            </div>
           </div>
+
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./src/img/merapi_special.png"
+                alt="Jeep Merapi Paket Special"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/merapi_special.png', 'Jeep Merapi Paket Special')"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full mb-3"
+              >
+                View Merapi Dekat
+              </span>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                TRIP 2: Paket Special
+              </h3>
+              <p class="text-gray-600 mb-4 text-sm">
+                Fokus ke spot sejarah dan pemandangan Gunung Merapi dari dekat,
+                termasuk Bunker Kaliadem. Musium Mini atau Rumah Mbah Maridjan.
+              </p>
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 450.000 / Jeep
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-merapi-2')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas-merapi')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+              <button
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="Jeep Merapi Special"
+              >
+                Booking
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./src/img/merapi_medium.png"
+                alt="Jeep Merapi Paket Medium"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/merapi_medium.png', 'Jeep Merapi Paket Medium')"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 rounded-full mb-3"
+              >
+                Rekomendasi Favorit
+              </span>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                TRIP 3: Paket Medium
+              </h3>
+              <p class="text-gray-600 mb-4 text-sm">
+                Kombinasi terbaik: spot sejarah (Petilasan/Musium), alam (Batu
+                Alien/TLWP), dan manuver off-road di Kali Kuning.
+              </p>
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 500.000 / Jeep
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-merapi-3')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas-merapi')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+              <button
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="Jeep Merapi Medium"
+              >
+                Booking
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./src/img/merapi_long.png"
+                alt="Jeep Merapi Paket Long"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/merapi_long.png', 'Jeep Merapi Paket Long')"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full mb-3"
+              >
+                Paling Lengkap
+              </span>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                TRIP 4: Paket Long
+              </h3>
+              <p class="text-gray-600 mb-4 text-sm">
+                Durasi terpanjang (hingga 90 menit). Mengunjungi semua spot
+                ikonik Merapi: Petilasan, Bunker, Musium, Batu Alien, dan
+                manuver.
+              </p>
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 600.000 / Jeep
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-merapi-4')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas-merapi')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+              <button
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="Jeep Merapi Long"
+              >
+                Booking
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./src/img/merapi_sunrise1.png"
+                alt="Jeep Merapi Paket Sunrise 1"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/merapi_sunrise1.png', 'Jeep Merapi Paket Sunrise 1')"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full mb-3"
+              >
+                Sunrise View
+              </span>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                TRIP 5: Paket Sunrise 1
+              </h3>
+              <p class="text-gray-600 mb-4 text-sm">
+                Menikmati matahari terbit (Sunrise) dengan latar belakang Gunung
+                Merapi dari Bunker Kaliadem. Termasuk Musium Mini.
+              </p>
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 550.000 / Jeep
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-merapi-5')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas-merapi')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+              <button
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="Jeep Merapi Sunrise 1"
+              >
+                Booking
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./src/img/merapi_sunrise2.png"
+                alt="Jeep Merapi Paket Sunrise 2"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/merapi_sunrise2.png', 'Jeep Merapi Paket Sunrise 2')"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block bg-yellow-200 text-yellow-900 text-xs font-semibold px-3 py-1 rounded-full mb-3"
+              >
+                Sunrise Terlengkap
+              </span>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                TRIP 6: Paket Sunrise 2
+              </h3>
+              <p class="text-gray-600 mb-4 text-sm">
+                Menyaksikan Sunrise, Musium, Batu Alien/TLWP, dan Bunker. Rute
+                Sunrise yang paling lengkap . Durasi trip lebih panjang.
+              </p>
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 600.000 / Jeep
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-merapi-6')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas-merapi')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+              <button
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="Jeep Merapi Sunrise 2"
+              >
+                Booking
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./src/img/merapi_explore.png"
+                alt="Jeep Merapi Paket Kaliurang Explore"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/merapi_kaliurang.png', 'Jeep Merapi Paket Kaliurang Explore')"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full mb-3"
+              >
+                Kaliurang Zone
+              </span>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                TRIP 7: Kaliurang Explore
+              </h3>
+              <p class="text-gray-600 mb-4 text-sm">
+                Menjelajah area Kaliurang yang hijau . Lebih santai, banyak spot
+                foto alam (Nawang Jagad, Gardu Pandang), dan tidak terlalu
+                ekstrim.
+              </p>
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 450.000 / Jeep
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-merapi-7')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas-merapi')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+              <button
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="Jeep Merapi Kaliurang Explore"
+              >
+                Booking
+              </button>
+            </div>
+          </div>
+          <div class="hidden md:block"></div>
+          <div class="hidden md:block"></div>
+        </div>
+
+        <blockquote
+          class="mt-12 p-4 bg-yellow-50 border-l-4 border-yellow-500 text-yellow-800 rounded-lg"
+        >
+          Catatan: Harga paket trip adalah untuk 1 Jeep, dengan kapasitas
+          maksimal 4 orang dewasa. Sudah termasuk sopir berpengalaman & safety
+          standard. Harga belum termasuk tiket masuk destinasi.
+        </blockquote>
+
+        <div
+          id="modal-fasilitas-merapi"
+          class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+        >
+          <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+            <h3 class="text-2xl font-bold mb-4 text-blue-600">
+              ⭐ Fasilitas Paket Jeep Merapi
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+              <li>Unit Jeep (1 Unit, kapasitas 4 tamu dewasa)</li>
+              <li>Supir berpengalaman (sekaligus Jeep Guide)</li>
+              <li>BBM (Bahan Bakar Minyak)</li>
+              <li>Safety Standard (Helm & Masker)</li>
+              <li>Durasi Trip (Bervariasi, 30-90 menit tergantung paket)</li>
+              <li class="font-bold text-red-500 mt-3">
+                ❌ Catatan: Harga belum termasuk Tiket Masuk destinasi wisata.
+              </li>
+            </ul>
+            <button
+              onclick="closeModal('modal-fasilitas-merapi')"
+              class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="modal-rute-merapi-1"
+          class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+        >
+          <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+            <h3 class="text-2xl font-bold mb-4 text-blue-600">
+              📍 Rute Jeep TRIP 1: Short+ (Rp 400.000)
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>Musium Mini Sisa Hartaku</li>
+              <li>Batu Alien / The Lost World Park</li>
+              <li class="font-bold text-red-600">Manuver Kali Kuning</li>
+            </ul>
+            <p class="mt-3 text-sm italic">Durasi sekitar 30-60 menit.</p>
+            <button
+              onclick="closeModal('modal-rute-merapi-1')"
+              class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="modal-rute-merapi-2"
+          class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+        >
+          <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+            <h3 class="text-2xl font-bold mb-4 text-blue-600">
+              📍 Rute Jeep TRIP 2: Special (Rp 450.000)
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>Musium Mini / Rumah Mbah Maridjan</li>
+              <li class="font-bold text-red-600">
+                Bunker Kaliadem (View Merapi)
+              </li>
+              <li>Manuver Kali Kuning</li>
+            </ul>
+            <p class="mt-3 text-sm italic">Durasi sekitar 60 menit.</p>
+            <button
+              onclick="closeModal('modal-rute-merapi-2')"
+              class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="modal-rute-merapi-3"
+          class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+        >
+          <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+            <h3 class="text-2xl font-bold mb-4 text-blue-600">
+              📍 Rute Jeep TRIP 3: Medium (Rp 500.000)
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>Petilasan Mbah Maridjan / Musium Mini Sisa Hartaku</li>
+              <li class="font-bold text-red-600">Bunker Kaliadem</li>
+              <li>Batu Alien / The Lost World Park</li>
+              <li>Manuver Kali Kuning</li>
+            </ul>
+            <p class="mt-3 text-sm italic">Durasi sekitar 60-75 menit.</p>
+            <button
+              onclick="closeModal('modal-rute-merapi-3')"
+              class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="modal-rute-merapi-4"
+          class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+        >
+          <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+            <h3 class="text-2xl font-bold mb-4 text-blue-600">
+              📍 Rute Jeep TRIP 4: Long (Rp 600.000)
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li class="font-bold text-red-600">Petilasan Mbah Maridjan</li>
+              <li>Bunker Kaliadem</li>
+              <li>Musium Mini Sisa Hartaku</li>
+              <li>Batu Alien / The Lost World Park</li>
+              <li>Manuver Kali Kuning</li>
+            </ul>
+            <p class="mt-3 text-sm italic">Durasi sekitar 90 menit.</p>
+            <button
+              onclick="closeModal('modal-rute-merapi-4')"
+              class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="modal-rute-merapi-5"
+          class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+        >
+          <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+            <h3 class="text-2xl font-bold mb-4 text-blue-600">
+              🌅 Rute Jeep TRIP 5: Sunrise 1 (Rp 550.000)
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li class="font-bold text-red-600">
+                Bunker Kaliadem (Sunrise Spot)
+              </li>
+              <li>Musium Mini Sisa Hartaku</li>
+              <li>Manuver Kali Kuning</li>
+            </ul>
+            <p class="mt-3 text-sm italic">
+              Durasi sekitar 60-75 menit. Keberangkatan subuh.
+            </p>
+            <button
+              onclick="closeModal('modal-rute-merapi-5')"
+              class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="modal-rute-merapi-6"
+          class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+        >
+          <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+            <h3 class="text-2xl font-bold mb-4 text-blue-600">
+              🌅 Rute Jeep TRIP 6: Sunrise 2 (Rp 600.000)
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>Bunker Kaliadem (Sunrise Spot)</li>
+              <li>Musium Mini Sisa Hartaku</li>
+              <li>Batu Alien / The Lost World Park</li>
+              <li>Manuver Kali Kuning</li>
+            </ul>
+            <p class="mt-3 text-sm italic">
+              Durasi sekitar 75-90 menit. Keberangkatan subuh.
+            </p>
+            <button
+              onclick="closeModal('modal-rute-merapi-6')"
+              class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="modal-rute-merapi-7"
+          class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+        >
+          <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+            <h3 class="text-2xl font-bold mb-4 text-blue-600">
+              🌲 Rute Jeep TRIP 7: Kaliurang Explore (Rp 450.000)
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>Nawang Jagad</li>
+              <li>Gardu Pandang</li>
+              <li class="font-bold text-red-600">Manuver Kaliboyong</li>
+            </ul>
+            <p class="mt-3 text-sm italic">
+              Durasi sekitar 60 menit. Cocok untuk wisata alam.
+            </p>
+            <button
+              onclick="closeModal('modal-rute-merapi-7')"
+              class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="jeep-shiva-plateau" class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12 text-orange-600">
+          🌄 Jeep Wisata Shiva Plateau (Prambanan & Breksi)
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./src/img/shiva_short.png"
+                alt="Jeep Shiva Plateau Short Trip"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/shiva_short.png', 'Jeep Shiva Plateau Short Trip')"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full mb-3"
+              >
+                Trip Singkat & Ikonik
+              </span>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                TRIP 1: Short Trip
+              </h3>
+              <p class="text-gray-600 mb-4 text-sm">
+                Trip singkat yang mencakup spot foto ikonik seperti Spot Riyadi,
+                Candi Barong, dan Tebing Breksi. Cocok untuk keluarga.
+              </p>
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 350.000 / Jeep
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-shiva-1')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas-shiva')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+              <button
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="Jeep Shiva Plateau Short"
+              >
+                Booking
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./src/img/shiva_medium.png"
+                alt="Jeep Shiva Plateau Medium Trip"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/shiva_medium.png', 'Jeep Shiva Plateau Medium Trip')"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full mb-3"
+              >
+                Adventure & Candi
+              </span>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                TRIP 2: Medium Trip
+              </h3>
+              <p class="text-gray-600 mb-4 text-sm">
+                Durasi lebih panjang. Kombinasi spot candi (Barong, Ijo,
+                Banyunibo) dan tebing (Breksi, Banyunibo). **Bonus Free Sungai
+                Adventure.**
+              </p>
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 500.000 / Jeep
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-shiva-2')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas-shiva')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+              <button
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="Jeep Shiva Plateau Medium"
+              >
+                Booking
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in">
+            <div class="relative pt-[100%] rounded-t-xl overflow-hidden">
+              <img
+                src="./src/img/shiva_long.png"
+                alt="Jeep Shiva Plateau Long Trip"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/shiva_long.png', 'Jeep Shiva Plateau Long Trip')"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full mb-3"
+              >
+                Paling Lengkap & Ekstrem
+              </span>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                TRIP 3: Long Trip
+              </h3>
+              <p class="text-gray-600 mb-4 text-sm">
+                Paket paling lengkap termasuk spot viral **Selo Langit**. Bonus
+                Sungai Adventure yang lebih panjang dan menantang.
+              </p>
+              <p class="text-2xl font-bold text-orange-600 mb-4">
+                Rp 650.000 / Jeep
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-rute-shiva-3')"
+                >
+                  Detail Rute
+                </button>
+                <button
+                  class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                  onclick="openModal('modal-fasilitas-shiva')"
+                >
+                  Fasilitas
+                </button>
+              </div>
+              <button
+                class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                data-package="Jeep Shiva Plateau Long"
+              >
+                Booking
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <blockquote
+          class="mt-12 p-4 bg-yellow-50 border-l-4 border-yellow-500 text-yellow-800 rounded-lg"
+        >
+          Catatan: Harga paket trip adalah untuk 1 Jeep, dengan kapasitas
+          maksimal 4 orang dewasa. Sudah termasuk Driver berpengalaman, Asuransi
+          Penumpang, dan Air Mineral. Harga belum termasuk Tiket Masuk destinasi
+          wisata.
+        </blockquote>
+      </div>
+      <div
+        id="modal-fasilitas-shiva"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+      >
+        <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+          <h3 class="text-2xl font-bold mb-4 text-orange-600">
+            ⭐ Fasilitas Paket Jeep Shiva Plateau
+          </h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li>Unit Jeep (1 Unit, kapasitas 4 tamu dewasa)</li>
+            <li>Driver berpengalaman</li>
+            <li>Asuransi Penumpang</li>
+            <li>4 Air Mineral Gratis</li>
+            <li>Durasi Trip (Bervariasi sesuai paket)</li>
+            <li class="font-bold text-red-500 mt-3">
+              ❌ Catatan: Harga belum termasuk Tiket Masuk destinasi wisata.
+            </li>
+          </ul>
+          <button
+            onclick="closeModal('modal-fasilitas-shiva')"
+            class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition"
+          >
+            Tutup
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="modal-rute-shiva-1"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+      >
+        <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+          <h3 class="text-2xl font-bold mb-4 text-orange-600">
+            📍 Rute Jeep TRIP 1: Short (Rp 350.000)
+          </h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-1">
+            <li>Spot Riyadi</li>
+            <li>Candi Barong</li>
+            <li class="font-bold text-orange-600">Tebing Breksi</li>
+          </ul>
+          <p class="mt-3 text-sm italic">Termasuk: Asuransi dan Air Mineral.</p>
+          <button
+            onclick="closeModal('modal-rute-shiva-1')"
+            class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition"
+          >
+            Tutup
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="modal-rute-shiva-2"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+      >
+        <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+          <h3 class="text-2xl font-bold mb-4 text-orange-600">
+            📍 Rute Jeep TRIP 2: Medium (Rp 500.000)
+          </h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-1">
+            <li>Candi Barong</li>
+            <li>Embung</li>
+            <li>Tebing Breksi</li>
+            <li class="font-bold text-orange-600">Candi Ijo</li>
+            <li>Candi Banyunibo</li>
+            <li>Tebing Banyunibo</li>
+            <li class="font-bold text-red-600">BONUS: Free Sungai Adventure</li>
+          </ul>
+          <p class="mt-3 text-sm italic">Termasuk: Asuransi dan Air Mineral.</p>
+          <button
+            onclick="closeModal('modal-rute-shiva-2')"
+            class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition"
+          >
+            Tutup
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="modal-rute-shiva-3"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+      >
+        <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+          <h3 class="text-2xl font-bold mb-4 text-orange-600">
+            📍 Rute Jeep TRIP 3: Long (Rp 650.000)
+          </h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-1">
+            <li>Candi Barong</li>
+            <li>Embung</li>
+            <li>Tebing Breksi</li>
+            <li class="font-bold text-orange-600">Candi Ijo</li>
+            <li>Selo Langit (Spot Viral)</li>
+            <li>Candi Banyunibo</li>
+            <li>Tebing Banyunibo</li>
+            <li class="font-bold text-red-600">
+              BONUS: Free Sungai Adventure (Lebih Ekstrem)
+            </li>
+          </ul>
+          <p class="mt-3 text-sm italic">
+            Termasuk: Asuransi dan Air Mineral. Paket paling lengkap.
+          </p>
+          <button
+            onclick="closeModal('modal-rute-shiva-3')"
+            class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition"
+          >
+            Tutup
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div
+      id="modal-rute-kuto"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+        <h3 class="text-2xl font-bold mb-4 text-orange-600">
+          🗺️ Rute VW Safari Kuto
+        </h3>
+        <p class="text-gray-700">
+          Titik Kumpul – Tugu Pal Putih (Foto) – Stasiun Yogyakarta (Foto) -
+          Susur Malioboro – Alun – Alun – Keraton Yogyakarta (Foto) – Taman Sari
+          (Foto) – Pakualaman (Foto) – Finish Titik Kumpul.
+        </p>
+        <button
+          onclick="closeModal('modal-rute-kuto')"
+          class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg"
+        >
+          Tutup
+        </button>
+      </div>
+    </div>
+
+    <div
+      id="modal-rute-candi"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+        <h3 class="text-2xl font-bold mb-4 text-orange-600">
+          🗺️ Rute VW Safari Candi
+        </h3>
+        <p class="text-gray-700">
+          Titik Kumpul – Jalur Desa Candi Prambanan – Candi Plaosan (Foto) –
+          Susur Spot Sawah – UMKM Pabrik Bakpia Mutiara (Foto, Belanja Oleh2) –
+          Candi Sojiwan (Foto) – Tebing Breksi (Foto) – Finish Titik Kumpul.
+        </p>
+        <button
+          onclick="closeModal('modal-rute-candi')"
+          class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg"
+        >
+          Tutup
+        </button>
+      </div>
+    </div>
+
+    <div
+      id="modal-rute-pantai"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+        <h3 class="text-2xl font-bold mb-4 text-orange-600">
+          🗺️ Rute VW Safari Pantai & Gumuk Pasir
+        </h3>
+        <p class="text-gray-700">
+          Titik Kumpul – Jalur Kota Jogja Parangtritis – Susur Spot Sawah dan
+          Pohon Cemara (Foto) – Spot Gumuk Pasir (Foto) – Spot JLS (Foto) –
+          Pantai Parangkusumo (Foto) – Finish Titik Kumpul.
+        </p>
+        <button
+          onclick="closeModal('modal-rute-pantai')"
+          class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg"
+        >
+          Tutup
+        </button>
+      </div>
+    </div>
+
+    <div
+      id="modal-fasilitas"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+        <h3 class="text-2xl font-bold mb-4 text-orange-600">
+          ⭐ Fasilitas Paket VW Safari
+        </h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+          <li>Unit VW Safari (1 Unit VW, kapasitas 4 tamu dewasa)</li>
+          <li>Supir yang berpengalaman</li>
+          <li>BBM (Bahan Bakar Minyak)</li>
+          <li>Durasi Trip 3 Jam</li>
+          <li>Antar – Jemput Titik Kumpul (Sesuai Permintaan Tamu)</li>
+          <li class="font-bold text-red-500">
+            ❌ Tidak Termasuk: Parkir dan Tiket Masuk Destinasi Wisata.
+          </li>
+        </ul>
+        <button
+          onclick="closeModal('modal-fasilitas')"
+          class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg"
+        >
+          Tutup
+        </button>
+      </div>
+    </div>
+
+    <section id="rafting-sungai-elo" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12 text-orange-600">
+          🛶 Paket Arung Jeram Rafting Sungai Elo
+        </h2>
+
+        <div class="max-w-4xl mx-auto">
+          <div
+            class="w-full bg-gray-100 rounded-xl shadow-lg overflow-hidden fade-in"
+          >
+            <div class="relative pt-[56.25%] overflow-hidden">
+              <img
+                src="./src/img/rafting_elo_wide.png"
+                alt="Rafting Sungai Elo Progo"
+                class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+                onclick="openImageModal('./src/img/rafting_elo_wide.png', 'Rafting Sungai Elo Progo')"
+              />
+            </div>
+
+            <div class="p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="text-3xl font-bold mb-2 text-gray-800">
+                  Rafting Sungai Elo (11 KM)
+                </h3>
+                <p class="text-gray-600 mb-4 text-sm">
+                  Petualangan arung jeram Grade II-III selama 2.5 - 3 jam di
+                  Magelang, cocok untuk pemula.
+                </p>
+                <p class="text-4xl font-bold text-orange-600 mb-2">
+                  Rp 750.000 / Boat
+                </p>
+                <p class="text-sm text-gray-500">
+                  Maksimal 4 orang peserta per boat.
+                </p>
+              </div>
+
+              <div class="flex flex-col justify-end">
+                <div class="text-sm mb-4">
+                  <p class="font-semibold text-gray-700">Termasuk Utama:</p>
+                  <ul class="list-disc list-inside ml-4 text-gray-600">
+                    <li>Asuransi, Guide, Peralatan</li>
+                    <li>Makan Prasmanan & Kelapa Muda</li>
+                    <li>Dokumentasi (min 50 file)</li>
+                  </ul>
+                </div>
+
+                <div class="flex space-x-3 mb-4">
+                  <button
+                    class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                    onclick="openModal('modal-detail-rafting-elo')"
+                  >
+                    Detail Rute & Menu
+                  </button>
+                  <button
+                    class="flex-1 bg-gray-300 text-gray-800 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-400 transition"
+                    onclick="openModal('modal-fasilitas-rafting-elo')"
+                  >
+                    Fasilitas
+                  </button>
+                </div>
+
+                <button
+                  class="bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold block w-full hover:bg-orange-700 transition book-btn"
+                  data-package="Rafting Sungai Elo"
+                >
+                  Pesan Rafting Sekarang
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="modal-detail-rafting-elo"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+      >
+        <div class="bg-white rounded-lg p-6 max-w-xl w-full">
+          <h3 class="text-2xl font-bold mb-4 text-orange-600">
+            🗺️ Detail Rute & Menu Rafting Sungai Elo
+          </h3>
+
+          <div class="mb-5">
+            <h4 class="text-xl font-semibold text-gray-800 mb-2 border-b pb-1">
+              Keterangan Trip
+            </h4>
+            <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+              <li>Lokasi Start: Dusun Pare, Blondo, Magelang</li>
+              <li>Lokasi Finish: Desa Wisata Jamkid</li>
+              <li>Jarak Tempuh: 11 km</li>
+              <li>Durasi: 2,5 - 3 jam</li>
+              <li>Grade Sungai: II - III (Klasifikasi: Beginner)</li>
+              <li>Usia Peserta Min: 5 tahun</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-semibold text-gray-800 mb-2 border-b pb-1">
+              Menu Makan Prasmanan
+            </h4>
+            <div class="grid grid-cols-2 text-sm text-gray-700">
+              <span> Nasi Putih</span>
+              <span> Ayam Bakar</span>
+              <span> Mie Goreng</span>
+              <span> Mendoan</span>
+              <span> Telur Dadar</span>
+              <span> Ca Kangkung</span>
+              <span> Sambal</span>
+              <span> Kerupuk</span>
+              <span> Buah Iris</span>
+              <span> Teh (Es Teh/Teh Hangat)</span>
+            </div>
+          </div>
+
+          <button
+            onclick="closeModal('modal-detail-rafting-elo')"
+            class="mt-6 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition"
+          >
+            Tutup
+          </button>
+        </div>
+      </div>
+      <div
+        id="modal-fasilitas-rafting-elo"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
+      >
+        <div class="bg-white rounded-lg p-6 max-w-lg w-full">
+          <h3 class="text-2xl font-bold mb-4 text-orange-600">
+            ⭐ Fasilitas Paket Rafting Sungai Elo
+          </h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li>Unit Boat (Maks. 4 orang per boat)</li>
+            <li>Dokumentasi (minimal 50 file)</li>
+            <li>Asuransi</li>
+            <li>Peralatan Rafting Lengkap</li>
+            <li>Pemandu Rafting (Guide Profesional)</li>
+            <li>Kelapa muda dan Snack di Rest Area</li>
+            <li>Makan Prasmanan setelah rafting</li>
+            <li>Local Transport (Base camp ke Start/Finish)</li>
+            <li>Pemakaian Kamar Mandi/Bilas</li>
+          </ul>
+          <button
+            onclick="closeModal('modal-fasilitas-rafting-elo')"
+            class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition"
+          >
+            Tutup
+          </button>
         </div>
       </div>
     </section>
@@ -701,6 +2317,18 @@
     </div>
 
     <script>
+      function openModal(modalId) {
+        document.getElementById(modalId).classList.remove("hidden");
+        document.getElementById(modalId).classList.add("flex");
+      }
+
+      function closeModal(modalId) {
+        document.getElementById(modalId).classList.add("hidden");
+        document.getElementById(modalId).classList.remove("flex");
+      }
+      // Nomor WhatsApp tujuan booking
+      const WHATSAPP_NUMBER = "628999008880"; // Format internasional tanpa + atau 00
+
       const packages = [
         {
           img: "./src/img/paket.png",
@@ -785,14 +2413,15 @@
       const bookingModal = document.getElementById("booking-modal");
       const closeModalBtn = document.getElementById("close-modal");
       const bookingForm = document.getElementById("booking-form");
+      const rentalBookingForm = document.getElementById("rental-booking-form"); // Form Booking Tour
 
-      // VARIABEL BARU UNTUK MODAL GAMBAR
+      // VARIABEL UNTUK MODAL GAMBAR
       const imageModal = document.getElementById("image-modal");
       const fullImageDisplay = document.getElementById("full-image-display");
       const closeImageModalBtn = document.getElementById("close-image-modal");
       const imageCaption = document.getElementById("image-caption");
 
-      // FUNGSI BARU: Buka Modal Gambar
+      // FUNGSI UTAMA: Buka Modal Gambar
       window.openImageModal = (imageUrl, caption) => {
         if (!imageModal || !fullImageDisplay) return;
         fullImageDisplay.src = imageUrl;
@@ -828,7 +2457,6 @@
         return card;
       }
 
-      // Fungsi loadPackages (TIDAK BERUBAH)
       function loadPackages() {
         if (!packageGrid) return;
         const endIndex = Math.min(
@@ -846,8 +2474,153 @@
       }
 
       // =========================================================
-      // EVENT LISTENERS
+      // FUNGSI UTAMA: KIRIM PESAN KE WHATSAPP (FIXED ENCODING)
       // =========================================================
+      // GANTI FUNGSI INI DI DALAM TAG <script> ANDA
+
+      // FUNGSI UTAMA: KIRIM PESAN KE WHATSAPP (REVISI FINAL)
+      function sendWhatsAppMessage(message) {
+        // Pastikan semua baris baru (\n) diubah menjadi %0A sebelum di-encode
+        const formattedMessage = message.replace(/\n/g, "%0A");
+
+        // encodeURIComponent akan mengurus spasi menjadi %20 dan karakter khusus lainnya.
+        // Ini adalah cara paling stabil dan disarankan.
+        const encodedMessage = encodeURIComponent(formattedMessage);
+
+        const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+        window.open(whatsappUrl, "_blank");
+      }
+
+      // =========================================================
+      // 1. EVENT LISTENER UNTUK BOOKING TOUR (Formulir Rental)
+      // =========================================================
+      if (rentalBookingForm) {
+        rentalBookingForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const nama = document.getElementById("nama-booking").value;
+          const telpWa = document.getElementById("telp-wa").value;
+          const dewasa = document.getElementById("dewasa").value;
+          const anak = document.getElementById("anak").value;
+          const tanggal = document.getElementById("tanggal-sewa").value;
+          const destinasi = document.getElementById("destinasi").value;
+          const catatan = document.getElementById("catatan").value;
+
+          let message = ` JeepHALO TRAVINE! Jeep 🥳\n\nSaya ingin mengajukan permintaan  JeepBOOKING TOUR/RENTAL Jeep dengan rincian sebagai berikut:\n\n`;
+          message += ` Jeep1. DATA PEMESAN: Jeep\n`;
+          message += `Nama: ${nama}\n`;
+          message += `No. WA: ${telpWa}\n\n`;
+          message += ` Jeep2. DETAIL PERJALANAN: Jeep\n`;
+          message += `Total Penumpang: ${
+            parseInt(dewasa) + parseInt(anak)
+          } orang (Dewasa: ${dewasa}, Anak: ${anak})\n`;
+          message += `Tanggal Mulai Sewa: ${tanggal}\n`;
+          message += `Rencana Destinasi: ${destinasi}\n`;
+          if (catatan) {
+            message += `Catatan Tambahan: ${catatan}\n\n`;
+          } else {
+            message += `Catatan Tambahan: (Tidak Ada)\n\n`;
+          }
+
+          message += `Mohon konfirmasi ketersediaan armada dan harga total untuk rincian di atas. Terima kasih.`;
+
+          sendWhatsAppMessage(message);
+        });
+      }
+
+      // =========================================================
+      // 2. EVENT LISTENER UNTUK PEMESANAN PAKET (Pop-up Modal)
+      // =========================================================
+      if (bookingForm) {
+        bookingForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const packageName = document.getElementById("package").value;
+          const name = document.getElementById("name").value;
+          const contact = document.getElementById("contact").value;
+          const date = document.getElementById("date").value;
+          const participants = document.getElementById("participants").value;
+          const messageText = document.getElementById("message").value;
+
+          let message = ` JeepHALO TRAVINE! Jeep 🎉\n\nSaya ingin memesan paket wisata dengan detail di bawah ini:\n\n`;
+          message += ` Jeep1. PAKET DIPILIH: Jeep\n`;
+          message += ` Jeep${packageName} Jeep\n\n`;
+          message += ` Jeep2. DETAIL PEMESANAN: Jeep\n`;
+          message += `Nama: ${name}\n`;
+          message += `No. WA: ${contact}\n`;
+          message += `Tanggal: ${date}\n`;
+          message += `Jumlah Peserta: ${participants} orang\n`;
+          if (messageText) {
+            message += `Pesan Tambahan: ${messageText}\n\n`;
+          } else {
+            message += `Pesan Tambahan: (Tidak Ada)\n\n`;
+          }
+
+          message += `Mohon diproses pemesanan saya. Terima kasih.`;
+
+          sendWhatsAppMessage(message);
+          // Sembunyikan modal setelah pengiriman berhasil
+          bookingModal.style.display = "none";
+          document.body.style.overflow = "";
+        });
+      }
+
+      // =========================================================
+      // EVENT LISTENERS BAWAAN LAINNYA
+      // =========================================================
+
+      // Toggle Mobile Menu
+      if (burgerBtn && mobileMenu) {
+        burgerBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+          document.querySelectorAll(".burger-line").forEach((line) => {
+            line.classList.toggle("open");
+          });
+        });
+      }
+
+      // Open Booking Modal from button clicks
+      document.addEventListener("click", function (e) {
+        if (e.target && e.target.classList.contains("book-btn")) {
+          const packageName = e.target.getAttribute("data-package");
+          document.getElementById("package").value = packageName;
+          bookingModal.style.display = "flex";
+          document.body.style.overflow = "hidden"; // Mencegah scroll body
+        }
+      });
+
+      // Close Booking Modal
+      if (closeModalBtn) {
+        closeModalBtn.addEventListener("click", () => {
+          bookingModal.style.display = "none";
+          document.body.style.overflow = "";
+        });
+      }
+
+      // Close modal by clicking outside
+      if (bookingModal) {
+        bookingModal.addEventListener("click", (e) => {
+          if (e.target === bookingModal) {
+            bookingModal.style.display = "none";
+            document.body.style.overflow = "";
+          }
+        });
+      }
+
+      // Close modal by ESC key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          if (bookingModal && bookingModal.style.display === "flex") {
+            bookingModal.style.display = "none";
+            document.body.style.overflow = "";
+          }
+          if (imageModal && imageModal.style.display === "flex") {
+            imageModal.classList.add("hidden");
+            imageModal.style.display = "none";
+          }
+        }
+      });
 
       // Tutup modal gambar
       if (closeImageModalBtn) {
@@ -858,65 +2631,10 @@
         });
       }
 
-      // (Semua event listeners lainnya, termasuk booking modal, tetap sama)
       document.addEventListener("DOMContentLoaded", () => {
-        loadPackages(); // Muat paket awal
+        // Muat paket awal
+        // loadPackages();
       });
-
-      if (loadMoreBtn) {
-        loadMoreBtn.addEventListener("click", loadPackages);
-      }
-
-      if (burgerBtn && mobileMenu) {
-        burgerBtn.addEventListener("click", () => {
-          mobileMenu.classList.toggle("hidden");
-          burgerBtn
-            .querySelectorAll(".burger-line")
-            .forEach((line) => line.classList.toggle("open"));
-        });
-      }
-
-      document.addEventListener("click", (e) => {
-        if (e.target.classList.contains("book-btn") && bookingModal) {
-          const packageName = e.target.getAttribute("data-package");
-          const packageInput = document.getElementById("package");
-          if (packageInput) {
-            packageInput.value = packageName;
-          }
-          bookingModal.classList.remove("hidden");
-          bookingModal.style.display = "flex";
-        }
-      });
-
-      if (closeModalBtn) {
-        closeModalBtn.addEventListener("click", () => {
-          bookingModal.classList.add("hidden");
-          bookingModal.style.display = "none";
-        });
-      }
-
-      if (bookingModal) {
-        bookingModal.addEventListener("click", (e) => {
-          if (e.target === bookingModal) {
-            bookingModal.classList.add("hidden");
-            bookingModal.style.display = "none";
-          }
-        });
-      }
-
-      if (bookingForm) {
-        bookingForm.addEventListener("submit", (e) => {
-          e.preventDefault();
-          const formData = new FormData(bookingForm);
-          const data = Object.fromEntries(formData);
-          alert(
-            `Pemesanan berhasil!\nNama: ${data.name}\nKontak: ${data.contact}\nPaket: ${data.package}\nTanggal: ${data.date}\nPeserta: ${data.participants}\nPesan: ${data.message}`
-          );
-          bookingModal.classList.add("hidden");
-          bookingModal.style.display = "none";
-          bookingForm.reset();
-        });
-      }
     </script>
   </body>
 </html>

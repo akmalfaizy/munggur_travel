@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paket VW Safari | Travine</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="./src/img/favicon_travine.png"
+      type="image/x-icons"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      /* Custom transitions for smooth content entry */
+      .fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .burger-line {
+        transition: all 0.3s ease;
+      }
+      .burger-line.open:nth-child(1) {
+        transform: rotate(45deg) translate(0, 9px);
+      }
+
+      .burger-line.open:nth-child(2) {
+        opacity: 0;
+      }
+
+      .burger-line.open:nth-child(3) {
+        transform: rotate(-45deg) translate(0, -9px);
+      }
+      /* Mengatasi tampilan tombol di mobile */
+      .action-buttons-mobile {
+        /* Memastikan tombol selalu ditampilkan sebagai flex container */
+        display: flex;
+        flex-direction: row;
+        gap: 1rem; /* setara dengan space-x-4 pada tailwind */
+        border-top: 1px solid #e5e7eb; /* border-t */
+        padding-top: 1rem; /* pt-4 */
+        margin-top: 1rem; /* mt-4 */
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <nav
+      id="navbar"
+      class="bg-white shadow-md fixed top-0 w-full z-50 transition-all duration-300 rounded-b-xl"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="">
+            <a href="./index.html" class="flex items-center">
+              <img
+                src="./src/img/icon_travine.png"
+                alt="Travine Travel Logo"
+                class="h-12 w-auto"
+                style="filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))"
+              />
+            </a>
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="/index.html#home"
+              class="text-gray-700 hover:text-orange-600 transition rounded-lg px-2 py-1"
+              >Beranda</a
+            >
+            <a
+              href="/index.html#tipe-paket"
+              class="text-gray-700 hover:text-orange-600 transition rounded-lg px-2 py-1"
+              >Paket Wisata</a
+            >
+            <a
+              href="/index.html#layanan"
+              class="text-gray-700 hover:text-orange-600 transition rounded-lg px-2 py-1"
+              >Layanan</a
+            >
+            <a
+              href="/index.html#contact"
+              class="text-gray-700 hover:text-orange-600 transition rounded-lg px-2 py-1"
+              >Kontak</a
+            >
+          </div>
+          <div class="md:hidden">
+            <button id="burger-btn" class="focus:outline-none rounded-lg p-2">
+              <div class="w-6 h-6 flex flex-col justify-center">
+                <span
+                  class="burger-line w-full h-0.5 bg-gray-700 mb-1 rounded"
+                ></span>
+                <span
+                  class="burger-line w-full h-0.5 bg-gray-700 mb-1 rounded"
+                ></span>
+                <span
+                  class="burger-line w-full h-0.5 bg-gray-700 rounded"
+                ></span>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div
+          id="mobile-menu"
+          class="md:hidden hidden bg-white shadow-md rounded-b-xl"
+        >
+          <a
+            href="/index.html#home"
+            class="block px-4 py-2 text-gray-700 hover:bg-orange-100 rounded-lg"
+            >Beranda</a
+          >
+          <a
+            href="/index.html#tipe-paket"
+            class="block px-4 py-2 text-gray-700 hover:bg-orange-100 rounded-lg"
+            >Paket Wisata</a
+          >
+          <a
+            href="/index.html#layanan"
+            class="block px-4 py-2 text-gray-700 hover:bg-orange-100 rounded-lg"
+            >Layanan</a
+          >
+          <a
+            href="/index.html#contact"
+            class="block px-4 py-2 text-gray-700 hover:bg-orange-100 rounded-lg"
+            >Kontak</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section
+      id="hero-section"
+      class="hero-section text-center py-20 px-4 bg-gradient-to-b from-amber-700 to-white min-h-screen flex items-center justify-center"
+    >
+      <div class="max-w-4xl mx-auto pt-16">
+        <p
+          class="text-sm font-semibold text-white bg-orange-800/80 inline-block px-4 py-1 mb-6 rounded-full uppercase tracking-widest shadow-lg"
+        >
+          🚗 Tour Klasik | Iconic Heritage | Jelajah Desa
+        </p>
+
+        <h1 class="text-5xl font-extrabold mb-4 text-white md:text-6xl">
+          VW Safari Tour Yogyakarta & Borobudur
+        </h1>
+        <p class="text-xl font-medium text-white sm:text-2xl mt-4">
+          Rasakan sensasi petualangan retro di pusat kota, candi, hingga
+          perbukitan.
+        </p>
+
+        <div
+          class="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4"
+        >
+          <a
+            href="#vw-safari-tour"
+            class="bg-orange-600 text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-orange-600 transition duration-300 text-lg transform hover:scale-105"
+          >
+            Lihat Semua Rute 🗺️
+          </a>
+          <a
+            href="https://wa.me/nomorwhatsappanda"
+            target="_blank"
+            class="bg-orange-600 text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-orange-600 transition duration-300 text-lg transform hover:scale-105"
+          >
+            Chat Booking Cepat 💬
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="vw-safari-tour" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold text-center mb-4 text-gray-800">
+          🚗 Pengalaman Unik dengan VW Safari
+        </h2>
+        <p class="text-xl text-center mb-12 text-gray-600">
+          Jelajahi keindahan Jogja dan Borobudur dengan gaya klasik. Pilih rute
+          favorit Anda!
+        </p>
+
+        <h3
+          class="text-2xl font-bold mb-6 text-orange-600 border-b pb-2 text-center"
+        >
+          VW Safari Area Yogyakarta (3 Jam Trip)
+        </h3>
+
+        <div
+          class="bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-8 border border-orange-200 fade-in"
+        >
+          <div class="md:flex">
+            <div
+              class="w-full md:w-1/3 p-6 bg-orange-50 flex flex-col justify-center items-center"
+            >
+              <span class="text-6xl mb-2">🏯</span>
+              <h4 class="text-xl font-bold text-gray-800 text-center">
+                ICONIC Heritage Kuto
+              </h4>
+              <p class="text-sm text-gray-600 text-center">
+                Jelajahi Pusat Sejarah Kota Jogja
+              </p>
+            </div>
+
+            <div class="w-full md:w-2/3 p-6">
+              <h4 class="text-2xl font-bold mb-3 text-orange-600">
+                Trip Kuto (3 Jam)
+              </h4>
+              <p class="text-gray-700 mb-4">
+                Rute ikonik yang meliputi Tugu, Malioboro, Keraton, dan Taman
+                Sari.
+              </p>
+
+              <div class="flex items-end justify-between mb-4 mt-6">
+                <div>
+                  <p class="text-4xl font-extrabold text-blue-700">
+                    Rp 750.000
+                  </p>
+                  <span class="text-sm text-gray-600"
+                    >/ Unit VW (Max 4 Dewasa)</span
+                  >
+                </div>
+                <button
+                  class="bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-blue-800 transition book-btn shadow-lg"
+                  data-package="VW Iconic Heritage Kuto"
+                >
+                  Pesan Sekarang
+                </button>
+              </div>
+
+              <div class="action-buttons-mobile">
+                <button
+                  class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 transition view-itinerary-btn-vw"
+                  data-package="Yogya Kuto"
+                >
+                  Lihat Rute 🗺️
+                </button>
+                <button
+                  class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 transition view-facility-btn-vw"
+                  data-package="VW Safari Yogya"
+                >
+                  Lihat Fasilitas ✔️
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-8 border border-orange-200 fade-in"
+        >
+          <div class="md:flex">
+            <div
+              class="w-full md:w-1/3 p-6 bg-orange-50 flex flex-col justify-center items-center"
+            >
+              <span class="text-6xl mb-2">🕌</span>
+              <h4 class="text-xl font-bold text-gray-800 text-center">
+                ICONIC Heritage Candi
+              </h4>
+              <p class="text-sm text-gray-600 text-center">
+                Eksplorasi Candi & Spot Sawah Timur
+              </p>
+            </div>
+            <div class="w-full md:w-2/3 p-6">
+              <h4 class="text-2xl font-bold mb-3 text-orange-600">
+                Trip Candi (3 Jam)
+              </h4>
+              <p class="text-gray-700 mb-4">
+                Menyusuri Jalur Desa Candi Prambanan, Plaosan, Sojiwan, dan
+                Tebing Breksi.
+              </p>
+
+              <div class="flex items-end justify-between mb-4 mt-6">
+                <div>
+                  <p class="text-4xl font-extrabold text-blue-700">
+                    Rp 750.000
+                  </p>
+                  <span class="text-sm text-gray-600"
+                    >/ Unit VW (Max 4 Dewasa)</span
+                  >
+                </div>
+                <button
+                  class="bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-blue-800 transition book-btn shadow-lg"
+                  data-package="VW Iconic Heritage Candi"
+                >
+                  Pesan Sekarang
+                </button>
+              </div>
+              <div class="action-buttons-mobile">
+                <button
+                  class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 transition view-itinerary-btn-vw"
+                  data-package="Yogya Candi"
+                >
+                  Lihat Rute 🗺️
+                </button>
+                <button
+                  class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 transition view-facility-btn-vw"
+                  data-package="VW Safari Yogya"
+                >
+                  Lihat Fasilitas ✔️
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-8 border border-orange-200 fade-in"
+        >
+          <div class="md:flex">
+            <div
+              class="w-full md:w-1/3 p-6 bg-orange-50 flex flex-col justify-center items-center"
+            >
+              <span class="text-6xl mb-2">🏖️</span>
+              <h4 class="text-xl font-bold text-gray-800 text-center">
+                ICONIC Nature Pantai
+              </h4>
+              <p class="text-sm text-gray-600 text-center">
+                Petualangan Gumuk Pasir & Pantai Selatan
+              </p>
+            </div>
+            <div class="w-full md:w-2/3 p-6">
+              <h4 class="text-2xl font-bold mb-3 text-orange-600">
+                Trip Pantai (3 Jam)
+              </h4>
+              <p class="text-gray-700 mb-4">
+                Melintasi Gumuk Pasir, JLS, dan berakhir di Pantai Parangkusumo.
+              </p>
+
+              <div class="flex items-end justify-between mb-4 mt-6">
+                <div>
+                  <p class="text-4xl font-extrabold text-blue-700">
+                    Rp 750.000
+                  </p>
+                  <span class="text-sm text-gray-600"
+                    >/ Unit VW (Max 4 Dewasa)</span
+                  >
+                </div>
+                <button
+                  class="bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-blue-800 transition book-btn shadow-lg"
+                  data-package="VW Iconic Nature Pantai"
+                >
+                  Pesan Sekarang
+                </button>
+              </div>
+              <div class="action-buttons-mobile">
+                <button
+                  class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 transition view-itinerary-btn-vw"
+                  data-package="Yogya Pantai"
+                >
+                  Lihat Rute 🗺️
+                </button>
+                <button
+                  class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 transition view-facility-btn-vw"
+                  data-package="VW Safari Yogya"
+                >
+                  Lihat Fasilitas ✔️
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12 border border-orange-200 fade-in"
+        >
+          <div class="md:flex">
+            <div
+              class="w-full md:w-1/3 p-6 bg-orange-50 flex flex-col justify-center items-center"
+            >
+              <span class="text-6xl mb-2">🌿</span>
+              <h4 class="text-xl font-bold text-gray-800 text-center">
+                ICONIC Nature Nanggulan
+              </h4>
+              <p class="text-sm text-gray-600 text-center">
+                Menyusuri Sawah dan Perbukitan Menoreh
+              </p>
+            </div>
+            <div class="w-full md:w-2/3 p-6">
+              <h4 class="text-2xl font-bold mb-3 text-orange-600">
+                Trip Nanggulan (3 Jam)
+              </h4>
+              <p class="text-gray-700 mb-4">
+                Menikmati pemandangan sawah Godean, jalur Nanggulan, dan Menoreh
+                View Resto.
+              </p>
+
+              <div class="flex items-end justify-between mb-4 mt-6">
+                <div>
+                  <p class="text-4xl font-extrabold text-blue-700">
+                    Rp 750.000
+                  </p>
+                  <span class="text-sm text-gray-600"
+                    >/ Unit VW (Max 4 Dewasa)</span
+                  >
+                </div>
+                <button
+                  class="bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-blue-800 transition book-btn shadow-lg"
+                  data-package="VW Iconic Nature Nanggulan"
+                >
+                  Pesan Sekarang
+                </button>
+              </div>
+              <div class="action-buttons-mobile">
+                <button
+                  class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 transition view-itinerary-btn-vw"
+                  data-package="Yogya Nanggulan"
+                >
+                  Lihat Rute 🗺️
+                </button>
+                <button
+                  class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 transition view-facility-btn-vw"
+                  data-package="VW Safari Yogya"
+                >
+                  Lihat Fasilitas ✔️
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3
+          class="text-2xl font-bold mb-6 text-orange-600 border-b pb-2 text-center"
+        >
+          VW Safari Area Borobudur
+        </h3>
+
+        <div
+          class="bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-8 border border-orange-200 fade-in"
+        >
+          <div class="md:flex">
+            <div
+              class="w-full md:w-1/3 p-6 bg-green-50 flex flex-col justify-center items-center"
+            >
+              <span class="text-6xl mb-2">💚</span>
+              <h4 class="text-xl font-bold text-gray-800 text-center">
+                Happy Borobudur
+              </h4>
+              <p class="text-sm text-gray-600 text-center">
+                1,5 Jam Jelajah Desa & UMKM
+              </p>
+            </div>
+
+            <div class="w-full md:w-2/3 p-6">
+              <h4 class="text-2xl font-bold mb-3 text-orange-600">
+                Trip Happy (1,5 Jam)
+              </h4>
+              <p class="text-gray-700 mb-4">
+                Paket singkat untuk menikmati suasana pedesaan Borobudur dan
+                mengenal produk lokal. (1 Kunjungan UMKM)
+              </p>
+
+              <div class="flex items-end justify-between mb-4 mt-6">
+                <div>
+                  <p class="text-4xl font-extrabold text-blue-700">
+                    Rp 400.000
+                  </p>
+                  <span class="text-sm text-gray-600"
+                    >/ Unit VW (Max 4 Dewasa)</span
+                  >
+                </div>
+                <button
+                  class="bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-blue-800 transition book-btn shadow-lg"
+                  data-package="VW Happy Borobudur"
+                >
+                  Pesan Sekarang
+                </button>
+              </div>
+
+              <div class="action-buttons-mobile">
+                <button
+                  class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 transition view-itinerary-btn-vw"
+                  data-package="Borobudur Happy"
+                >
+                  Lihat Rute 🗺️
+                </button>
+                <button
+                  class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 transition view-facility-btn-vw"
+                  data-package="VW Safari Borobudur"
+                >
+                  Lihat Fasilitas ✔️
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-8 border border-orange-200 fade-in"
+        >
+          <div class="md:flex">
+            <div
+              class="w-full md:w-1/3 p-6 bg-green-50 flex flex-col justify-center items-center"
+            >
+              <span class="text-6xl mb-2">🌄</span>
+              <h4 class="text-xl font-bold text-gray-800 text-center">
+                Beauty Borobudur
+              </h4>
+              <p class="text-sm text-gray-600 text-center">
+                2 Jam, Lebih banyak eksplorasi desa
+              </p>
+            </div>
+            <div class="w-full md:w-2/3 p-6">
+              <h4 class="text-2xl font-bold mb-3 text-orange-600">
+                Trip Beauty (2 Jam)
+              </h4>
+              <p class="text-gray-700 mb-4">
+                Nikmati pemandangan indah desa sekitar Borobudur dengan waktu
+                yang lebih santai. (2 Kunjungan UMKM)
+              </p>
+              <div class="flex items-end justify-between mb-4 mt-6">
+                <div>
+                  <p class="text-4xl font-extrabold text-blue-700">
+                    Rp 500.000
+                  </p>
+                  <span class="text-sm text-gray-600"
+                    >/ Unit VW (Max 4 Dewasa)</span
+                  >
+                </div>
+                <button
+                  class="bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-blue-800 transition book-btn shadow-lg"
+                  data-package="VW Beauty Borobudur"
+                >
+                  Pesan Sekarang
+                </button>
+              </div>
+              <div class="action-buttons-mobile">
+                <button
+                  class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 transition view-itinerary-btn-vw"
+                  data-package="Borobudur Beauty"
+                >
+                  Lihat Rute 🗺️
+                </button>
+                <button
+                  class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 transition view-facility-btn-vw"
+                  data-package="VW Safari Borobudur"
+                >
+                  Lihat Fasilitas ✔️
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-8 border border-orange-200 fade-in"
+        >
+          <div class="md:flex">
+            <div
+              class="w-full md:w-1/3 p-6 bg-green-50 flex flex-col justify-center items-center"
+            >
+              <span class="text-6xl mb-2">🛕</span>
+              <h4 class="text-xl font-bold text-gray-800 text-center">
+                Excellent Borobudur
+              </h4>
+              <p class="text-sm text-gray-600 text-center">
+                2,5 Jam, Termasuk Candi Pawon
+              </p>
+            </div>
+            <div class="w-full md:w-2/3 p-6">
+              <h4 class="text-2xl font-bold mb-3 text-orange-600">
+                Trip Excellent (2,5 Jam)
+              </h4>
+              <p class="text-gray-700 mb-4">
+                Kombinasi jelajah desa, UMKM, dan kunjungan ke salah satu candi
+                pendamping Borobudur. (2 Kunjungan UMKM, 1 Candi Pawon)
+              </p>
+              <div class="flex items-end justify-between mb-4 mt-6">
+                <div>
+                  <p class="text-4xl font-extrabold text-blue-700">
+                    Rp 550.000
+                  </p>
+                  <span class="text-sm text-gray-600"
+                    >/ Unit VW (Max 4 Dewasa)</span
+                  >
+                </div>
+                <button
+                  class="bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-blue-800 transition book-btn shadow-lg"
+                  data-package="VW Excellent Borobudur"
+                >
+                  Pesan Sekarang
+                </button>
+              </div>
+              <div class="action-buttons-mobile">
+                <button
+                  class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 transition view-itinerary-btn-vw"
+                  data-package="Borobudur Excellent"
+                >
+                  Lihat Rute 🗺️
+                </button>
+                <button
+                  class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 transition view-facility-btn-vw"
+                  data-package="VW Safari Borobudur"
+                >
+                  Lihat Fasilitas ✔️
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-8 border border-orange-200 fade-in"
+        >
+          <div class="md:flex">
+            <div
+              class="w-full md:w-1/3 p-6 bg-green-50 flex flex-col justify-center items-center"
+            >
+              <span class="text-6xl mb-2">🎯</span>
+              <h4 class="text-xl font-bold text-gray-800 text-center">
+                Exotic Borobudur
+              </h4>
+              <p class="text-sm text-gray-600 text-center">
+                3 Jam, Termasuk 1 Destinasi Pilihan
+              </p>
+            </div>
+            <div class="w-full md:w-2/3 p-6">
+              <h4 class="text-2xl font-bold mb-3 text-orange-600">
+                Trip Exotic (3 Jam)
+              </h4>
+              <p class="text-gray-700 mb-4">
+                Waktu yang cukup untuk menjelajahi desa, UMKM, dan berhenti di
+                satu destinasi wisata utama di area Borobudur. (2 Kunjungan
+                UMKM, 1 Destinasi)
+              </p>
+              <div class="flex items-end justify-between mb-4 mt-6">
+                <div>
+                  <p class="text-4xl font-extrabold text-blue-700">
+                    Rp 650.000
+                  </p>
+                  <span class="text-sm text-gray-600"
+                    >/ Unit VW (Max 4 Dewasa)</span
+                  >
+                </div>
+                <button
+                  class="bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-blue-800 transition book-btn shadow-lg"
+                  data-package="VW Exotic Borobudur"
+                >
+                  Pesan Sekarang
+                </button>
+              </div>
+              <div class="action-buttons-mobile">
+                <button
+                  class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 transition view-itinerary-btn-vw"
+                  data-package="Borobudur Exotic"
+                >
+                  Lihat Rute 🗺️
+                </button>
+                <button
+                  class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 transition view-facility-btn-vw"
+                  data-package="VW Safari Borobudur"
+                >
+                  Lihat Fasilitas ✔️
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12 border border-orange-200 fade-in"
+        >
+          <div class="md:flex">
+            <div
+              class="w-full md:w-1/3 p-6 bg-green-50 flex flex-col justify-center items-center"
+            >
+              <span class="text-6xl mb-2">🌟</span>
+              <h4 class="text-xl font-bold text-gray-800 text-center">
+                Wonderful Borobudur
+              </h4>
+              <p class="text-sm text-gray-600 text-center">
+                4 Jam, Termasuk 2 Destinasi Pilihan
+              </p>
+            </div>
+            <div class="w-full md:w-2/3 p-6">
+              <h4 class="text-2xl font-bold mb-3 text-orange-600">
+                Trip Wonderful (4 Jam)
+              </h4>
+              <p class="text-gray-700 mb-4">
+                Paket paling lengkap untuk eksplorasi penuh area Borobudur,
+                mencakup desa, UMKM, dan dua destinasi wisata utama. (2
+                Kunjungan UMKM, 2 Destinasi)
+              </p>
+              <div class="flex items-end justify-between mb-4 mt-6">
+                <div>
+                  <p class="text-4xl font-extrabold text-blue-700">
+                    Rp 750.000
+                  </p>
+                  <span class="text-sm text-gray-600"
+                    >/ Unit VW (Max 4 Dewasa)</span
+                  >
+                </div>
+                <button
+                  class="bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-blue-800 transition book-btn shadow-lg"
+                  data-package="VW Wonderful Borobudur"
+                >
+                  Pesan Sekarang
+                </button>
+              </div>
+              <div class="action-buttons-mobile">
+                <button
+                  class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 transition view-itinerary-btn-vw"
+                  data-package="Borobudur Wonderful"
+                >
+                  Lihat Rute 🗺️
+                </button>
+                <button
+                  class="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 transition view-facility-btn-vw"
+                  data-package="VW Safari Borobudur"
+                >
+                  Lihat Fasilitas ✔️
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      id="modal-container"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden justify-center items-center p-4"
+    >
+      <div
+        id="modal-content"
+        class="bg-white rounded-xl p-8 max-w-xl w-full max-h-[90vh] overflow-y-auto relative"
+      >
+        <button
+          onclick="closeModal()"
+          class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-3xl font-light leading-none"
+        >
+          &times;
+        </button>
+        <h3
+          id="modal-title"
+          class="text-3xl font-bold mb-4 text-orange-600"
+        ></h3>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <section id="booking-section" class="py-16 bg-gray-50"></section>
+
+    <footer id="contact" class="bg-gray-800 text-white py-8 rounded-t-xl">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <a href="#" class="flex items-center mb-4">
+              <img
+                src="./src/img/icon_travine.png"
+                alt="Travine Travel Logo"
+                class="h-12 w-auto"
+                style="filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))"
+              />
+            </a>
+            <p class="mb-2">Alamat: Jl. Malioboro, Yogyakarta</p>
+            <p class="mb-2">No. Telepon/WhatsApp: +62 123 456 789</p>
+            <p>Email: info@travine.id</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Navigasi</h3>
+            <ul>
+              <li class="mb-2">
+                <a
+                  href="./index.html"
+                  class="hover:text-orange-400 rounded-lg transition"
+                  >Beranda</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Ikuti Kami</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="text-xl hover:text-orange-400 transition"
+                >FB</a
+              >
+              <a href="#" class="text-xl hover:text-orange-400 transition"
+                >IG</a
+              >
+              <a href="#" class="text-xl hover:text-orange-400 transition"
+                >TT</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-gray-700 pt-4 text-center">
+          <p class="text-sm">
+            © 2024 Travine. All rights reserved. Dibuat dengan ❤️ di Yogyakarta.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // --- DATA VW SAFARI LENGKAP ---
+      const vwSafariData = {
+        // Rute Yogyakarta
+        "Yogya Kuto": {
+          type: "Rute Kunjungan",
+          details: [
+            "Titik Kumpul – Tugu Pal Putih (Berhenti, Foto – Foto)",
+            "Pintu Masuk Stasiun Yogyakarta (Berhenti, Foto – Foto )",
+            "Susur Jalan Malioboro",
+            "Mengitari Alun – Alun",
+            "Keraton Yogyakarta (Berhenti, Foto – Foto )",
+            "Taman Sari (Berhenti, Foto – Foto)",
+            "Pakualaman (Berhenti, Foto –Foto)",
+            "Finish Titik Kumpul.",
+          ],
+        },
+        "Yogya Candi": {
+          type: "Rute Kunjungan",
+          details: [
+            "Titik Kumpul – Jalur Desa Candi Prambanan",
+            "Candi Plaosan (Berhenti, Foto – Foto)",
+            "Susur Spot Sawah",
+            "UMKM Pabrik Bakpia Mutiara (Berhenti, Foto – Foto, Belanja Oleh2 )",
+            "Candi Sojiwan (Berhenti, Foto – Foto)",
+            "Tebing Breksi (Berhenti, Foto –Foto)",
+            "Finish Titik Kumpul.",
+          ],
+        },
+        "Yogya Pantai": {
+          type: "Rute Kunjungan",
+          details: [
+            "Titik Kumpul – Jalur Kota Jogja Parangtritis",
+            "Susur Spot Sawah dan Pohon Cemara (Berhenti, Foto – Foto)",
+            "Spot Gumuk Pasir (Berhenti, Foto – Foto)",
+            "Spot JLS (Berhenti, Foto –Foto)",
+            "Pantai Parangkusumo (Berhenti, Foto- Foto )",
+            "Finish Titik Kumpul.",
+          ],
+        },
+        "Yogya Nanggulan": {
+          type: "Rute Kunjungan",
+          details: [
+            "Titik Kumpul – Jalur Kota Jogja Godean",
+            "Susur Spot Sawah (Berhenti, Foto – Foto)",
+            "Jalur Nanggulan (Berhenti, Foto – Foto)",
+            "Spot Nyiur Kelapa (Berhenti, Foto –Foto)",
+            "Menoreh View Resto (Berhenti, Foto- Foto )",
+            "Finish Titik Kumpul.",
+          ],
+        },
+
+        // Fasilitas Yogyakarta (Sama untuk semua paket Yogya)
+        "VW Safari Yogya": {
+          type: "Fasilitas",
+          details: [
+            "Unit VW Safari (1 Unit VW, kapasitas 4 tamu dewasa)",
+            "Supir",
+            "BBM",
+            "Durasi Trip 3 Jam",
+            "Antar – Jemput Titik Kumpul (Sesuai Permintaan Tamu)",
+            "**TIDAK TERMASUK**: Parkir dan Tiket Masuk Destinasi Wisata",
+          ],
+        },
+
+        // Rute Borobudur
+        "Borobudur Happy": {
+          type: "Rute Kunjungan",
+          details: [
+            "Durasi waktu 1,5 jam",
+            "1 Kunjungan UMKM",
+            "Jelajah desa dan spot foto",
+          ],
+        },
+        "Borobudur Beauty": {
+          type: "Rute Kunjungan",
+          details: [
+            "Durasi waktu 2 jam",
+            "2 Kunjungan UMKM",
+            "Jelajah desa dan spot foto",
+          ],
+        },
+        "Borobudur Excellent": {
+          type: "Rute Kunjungan",
+          details: [
+            "Durasi waktu 2,5 jam",
+            "2 Kunjungan UMKM",
+            "1 Kunjungan Candi Pawon",
+            "Jelajah desa dan spot foto",
+          ],
+        },
+        "Borobudur Exotic": {
+          type: "Rute Kunjungan",
+          details: [
+            "Durasi waktu 3 jam",
+            "1 Kunjungan Destinasi Utama",
+            "2 Kunjungan UMKM",
+            "Spot foto dan jelajah desa",
+          ],
+        },
+        "Borobudur Wonderful": {
+          type: "Rute Kunjungan",
+          details: [
+            "Durasi waktu 4 jam",
+            "2 Kunjungan Destinasi wisata",
+            "2 Kunjungan UMKM",
+            "Spot foto dan jelajah desa",
+          ],
+        },
+        // Fasilitas Borobudur (Sama untuk semua paket Borobudur)
+        "VW Safari Borobudur": {
+          type: "Fasilitas",
+          details: [
+            "Unit VW Safari (1 Unit VW, kapasitas 4 tamu dewasa)",
+            "Supir",
+            "BBM",
+            "Durasi Trip (Sesuai Paket yang dipilih: 1,5 - 4 Jam)",
+            "Antar – Jemput Titik Kumpul (Sesuai Permintaan Tamu)",
+            "**TIDAK TERMASUK**: Parkir dan Tiket Masuk Destinasi Wisata",
+          ],
+        },
+      };
+
+      // --- FUNGSI UTILITY MODAL (DIGUNAKAN KEMBALI) ---
+      const modalContainer = document.getElementById("modal-container");
+      const modalTitle = document.getElementById("modal-title");
+      const modalBody = document.getElementById("modal-body");
+
+      function openModal(title, contentHTML) {
+        modalTitle.innerHTML = title;
+        modalBody.innerHTML = contentHTML;
+        modalContainer.classList.remove("hidden");
+        modalContainer.classList.add("flex");
+      }
+
+      function closeModal() {
+        modalContainer.classList.add("hidden");
+        modalContainer.classList.remove("flex");
+      }
+
+      // Close modal when clicking outside
+      modalContainer.addEventListener("click", function (e) {
+        if (e.target.id === "modal-container") {
+          closeModal();
+        }
+      });
+
+      // --- FUNGSI UNTUK MEMBUAT KONTEN MODAL RUTE DAN FASILITAS VW SAFARI ---
+
+      function createRouteListHTML(data, isYogya = true) {
+        let html = '<ol class="relative border-l border-blue-200 ml-4">';
+        data.forEach((item, index) => {
+          html += `
+                    <li class="mb-6 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white text-blue-600 font-bold">
+                            ${index + 1}
+                        </span>
+                        <p class="text-gray-700">${item}</p>
+                    </li>
+                `;
+        });
+        html += "</ol>";
+        return html;
+      }
+
+      function createFacilityListHTML(data) {
+        let html = '<ul class="space-y-3">';
+        data.forEach((item) => {
+          const isExcluded = item.includes("TIDAK TERMASUK");
+          html += `<li class="flex items-start text-lg ${
+            isExcluded ? "text-red-600 font-semibold" : "text-gray-700"
+          }">
+                            <span class="mr-3 text-xl ${
+                              isExcluded
+                                ? "text-red-600"
+                                : "text-orange-600 font-bold"
+                            }">${isExcluded ? "❌" : "✔️"}</span> ${item}
+                        </li>`;
+        });
+        html += "</ul>";
+        return html;
+      }
+
+      // --- EVENT LISTENERS VW SAFARI (RUTE) ---
+      document.querySelectorAll(".view-itinerary-btn-vw").forEach((button) => {
+        button.addEventListener("click", function () {
+          const packageName = this.getAttribute("data-package");
+          const data = vwSafariData[packageName];
+          if (data) {
+            const title = `Rute ${packageName}`;
+            const content = createRouteListHTML(data.details);
+            openModal(title, content);
+          }
+        });
+      });
+
+      // --- EVENT LISTENERS VW SAFARI (FASILITAS) ---
+      document.querySelectorAll(".view-facility-btn-vw").forEach((button) => {
+        button.addEventListener("click", function () {
+          const packageName = this.getAttribute("data-package");
+          // Fasilitas di Yogya dan Borobudur dipisahkan oleh 'VW Safari'
+          const facilityKey = packageName; // Sudah diset di HTML: 'VW Safari Yogya' atau 'VW Safari Borobudur'
+          const data = vwSafariData[facilityKey];
+
+          if (data) {
+            const title = `Fasilitas ${facilityKey.replace("VW Safari ", "")}`;
+            const content = createFacilityListHTML(data.details);
+            openModal(title, content);
+          }
+        });
+      });
+
+      // --- MOBILE MENU TOGGLE (DIGUNAKAN KEMBALI) ---
+      const burgerBtn = document.getElementById("burger-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const burgerLines = burgerBtn.querySelectorAll(".burger-line");
+
+      burgerBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        burgerLines.forEach((line) => line.classList.toggle("open"));
+      });
+
+      // Hide mobile menu after clicking a link
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          burgerLines.forEach((line) => line.classList.remove("open"));
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -2368,7 +2368,7 @@
       const mobileMenu = document.getElementById("mobile-menu");
 
       // Variabel Form Booking (Asumsi ini adalah form di #booking-section)
-      const bookingForm = document.getElementById("booking-form");
+      const bookingForm = document.getElementById("accommodation-booking-form");
 
       // Variabel Modal Gambar
       const imageModal = document.getElementById("image-modal");
@@ -2453,33 +2453,23 @@
             const formData = new FormData(bookingForm);
             const data = Object.fromEntries(formData);
 
-            // --- KONSTRUKSI PESAN WHATSAPP (FIXED) ---
             const message =
-              `*FORM PEMESANAN PAKET WISATA*\n\n` +
-              `Halo Admin, saya ingin booking paket wisata berikut:\n\n` +
-              `*Paket Dipilih:* ${data.package || "Tidak Terisi"}\n` +
-              `*Nama Lengkap:* ${data.name || "Tidak Terisi"}\n` +
-              `*No. WA Aktif:* ${data.contact || "Tidak Terisi"}\n` +
-              `*Tanggal Berangkat:* ${data.date || "Tidak Terisi"}\n` +
-              `*Jumlah Peserta:* ${
-                data.participants || "Tidak Terisi"
-              } orang\n` +
-              `*Pesan Tambahan:* ${data.message || "-"}\n\n` +
-              `Mohon konfirmasi ketersediaan paket dan total biayanya. Terima kasih.`;
-            // ----------------------------------------
+              `*FORM BOOKING AKOMODASI 🏨*\n\n` +
+              `*Nama:* ${data.nama}\n` +
+              `*No. WA:* ${data.telp_wa}\n` +
+              `*Check-in:* ${data.tanggal_check_in}\n` +
+              `*Check-out:* ${data.tanggal_check_out}\n` +
+              `*Jumlah Kamar:* ${data.jumlah_kamar}\n` +
+              `*Jenis Akomodasi:* ${data.jenis_akomodasi}\n` +
+              `*Catatan:* ${data.catatan || "-"}\n\n` +
+              `Mohon info ketersediaan dan detail harga.`;
 
             const encodedMessage = encodeURIComponent(message);
             const waLink = `https://wa.me/${adminWhatsAppNumber}?text=${encodedMessage}`;
 
-            console.log("Pesan WhatsApp:", message); // Debugging
             window.open(waLink, "_blank");
-
-            bookingForm.reset(); // Reset form setelah submit
+            bookingForm.reset();
           });
-        } else {
-          console.error(
-            "Kesalahan: Elemen Form dengan ID 'booking-form' tidak ditemukan."
-          );
         }
 
         // 2. Logika Scroll ke Section dan Mengisi Form

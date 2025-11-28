@@ -2087,290 +2087,6 @@
       </div>
     </section>
 
-    <section id="booking-section" class="py-16 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-12 text-orange-600">
-          Formulir Pemesanan Destinasi 📝
-        </h2>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <div class="lg:col-span-1 bg-white p-8 rounded-xl shadow-lg fade-in">
-            <h3 class="text-2xl font-bold mb-6 border-b pb-2 text-orange-600">
-              Proses Booking Tour & Destinasi
-            </h3>
-            <p class="mb-6 text-gray-700">
-              Munggur Travel mempermudah pemesanan paket tour dan destinasi
-              Anda, termasuk trip ikonik VW Safari Yogyakarta dan Borobudur. Isi
-              formulir di samping untuk mengirimkan permintaan booking Anda.
-            </p>
-            <ul class="space-y-3 mb-8 text-gray-700">
-              <li class="flex items-center">
-                <span class="text-green-500 mr-2">✅</span> Konfirmasi Cepat via
-                WhatsApp
-              </li>
-              <li class="flex items-center">
-                <span class="text-green-500 mr-2">✅</span> Harga Terbaik &
-                Transparan
-              </li>
-              <li class="flex items-center">
-                <span class="text-green-500 mr-2">✅</span> Pemandu Lokal
-                Berpengalaman
-              </li>
-              <li class="flex items-center">
-                <span class="text-green-500 mr-2">✅</span> Jadwal Fleksibel
-                Sesuai Pilihan Anda
-              </li>
-            </ul>
-
-            <h3 class="text-2xl font-bold mb-4 border-b pb-2 text-orange-600">
-              Ketentuan Umum
-            </h3>
-            <ul class="space-y-3 text-sm text-gray-700">
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2 font-bold">✔️</span>
-                <span
-                  >Harga tour/paket destinasi yang tertera sudah termasuk
-                  fasilitas sesuai deskripsi paket.</span
-                >
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2 font-bold">✔️</span>
-                <span
-                  >Formulir ini adalah *Permintaan Booking*. Konfirmasi
-                  ketersediaan dan total harga akan kami kirimkan via
-                  WhatsApp/Telp.</span
-                >
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2 font-bold">✔️</span>
-                <span
-                  >Untuk paket VW Safari, harga dihitung per unit (maksimal 4
-                  orang dewasa).</span
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="lg:col-span-2 bg-white p-8 rounded-xl shadow-lg fade-in">
-            <div class="bg-orange-600 text-white p-4 rounded-t-lg mb-6">
-              <h3 class="text-xl font-bold">Booking Destinasi / Tour</h3>
-            </div>
-            <p class="mb-6 text-gray-700">
-              Isi data diri dan paket tour yang Anda minati. Kami akan segera
-              menghubungi Anda untuk konfirmasi.
-            </p>
-
-            <form id="rental-booking-form" class="space-y-5">
-              <input
-                type="hidden"
-                id="selected-package-input"
-                name="selected_package_name"
-                value="Pilihan Belum Ditentukan"
-              />
-
-              <div>
-                <label
-                  for="nama-booking"
-                  class="block text-sm font-medium text-gray-700"
-                  >Nama *</label
-                >
-                <input
-                  type="text"
-                  id="nama-booking"
-                  name="nama"
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
-                  required
-                />
-              </div>
-
-              <div>
-                <label
-                  for="telp-wa"
-                  class="block text-sm font-medium text-gray-700"
-                  >No. Telp / WA *</label
-                >
-                <input
-                  type="tel"
-                  id="telp-wa"
-                  name="telp_wa"
-                  placeholder="Cth: 08123456789"
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
-                  required
-                />
-              </div>
-
-              <div>
-                <label
-                  for="paket-tour"
-                  class="block text-sm font-medium text-gray-700"
-                  >Pilihan Destinasi / Paket Tour *</label
-                >
-                <select
-                  id="paket-tour"
-                  name="paket_tour"
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500 bg-white"
-                  required
-                >
-                  <option value="Pilihan Belum Ditentukan" disabled selected>
-                    Pilih salah satu paket tour di atas...
-                  </option>
-
-                  <optgroup label="— VW Safari Tour Yogyakarta —">
-                    <option value="VW Safari Jogja Short (2.5 Jam)">
-                      VW Safari Jogja Short (2.5 Jam)
-                    </option>
-                    <option value="VW Safari Jogja Medium (3.5 Jam)">
-                      VW Safari Jogja Medium (3.5 Jam)
-                    </option>
-                    <option value="VW Safari Jogja Long (4.5 Jam)">
-                      VW Safari Jogja Long (4.5 Jam)
-                    </option>
-                  </optgroup>
-
-                  <optgroup label="— VW Safari Tour Borobudur —">
-                    <option value="VW Happy Borobudur (1.5 Jam)">
-                      VW Happy Borobudur (1.5 Jam)
-                    </option>
-                    <option value="VW Beauty Borobudur (2 Jam)">
-                      VW Beauty Borobudur (2 Jam)
-                    </option>
-                    <option value="VW Excellent Borobudur (2.5 Jam)">
-                      VW Excellent Borobudur (2.5 Jam)
-                    </option>
-                    <option value="VW Exotic Borobudur (3 Jam)">
-                      VW Exotic Borobudur (3 Jam)
-                    </option>
-                    <option value="VW Wonderful Borobudur (4 Jam)">
-                      VW Wonderful Borobudur (4 Jam)
-                    </option>
-                  </optgroup>
-
-                  <optgroup label="— LAVA TOUR JEEP MERAPI —">
-                    <option value="Lava Tour Merapi - Paket Short+ (400K)">
-                      Lava Tour Merapi - Paket Short+ (400K)
-                    </option>
-                    <option value="Lava Tour Merapi - Paket Special (450K)">
-                      Lava Tour Merapi - Paket Special (450K)
-                    </option>
-                    <option value="Lava Tour Merapi - Paket Medium (500K)">
-                      Lava Tour Merapi - Paket Medium (500K)
-                    </option>
-                    <option value="Lava Tour Merapi - Paket Long (600K)">
-                      Lava Tour Merapi - Paket Long (600K)
-                    </option>
-                    <option value="Lava Tour Merapi - Paket Sunrise 1 (550K)">
-                      Lava Tour Merapi - Paket Sunrise 1 (550K)
-                    </option>
-                    <option value="Lava Tour Merapi - Paket Sunrise 2 (600K)">
-                      Lava Tour Merapi - Paket Sunrise 2 (600K)
-                    </option>
-                    <option value="Lava Tour Merapi - Kaliurang Explore (450K)">
-                      Lava Tour Merapi - Kaliurang Explore (450K)
-                    </option>
-                  </optgroup>
-
-                  <optgroup label="— JEEP WISATA LAIN —">
-                    <option value="Jeep Shiva Platea - SHORT TRIP (350K)">
-                      Jeep Shiva Platea - SHORT TRIP (350K)
-                    </option>
-                    <option value="Jeep Shiva Platea - MEDIUM TRIP (500K)">
-                      Jeep Shiva Platea - MEDIUM TRIP (500K)
-                    </option>
-                    <option value="Jeep Shiva Platea - LONG TRIP (650K)">
-                      Jeep Shiva Platea - LONG TRIP (650K)
-                    </option>
-                    <option value="Jeep Gumuk Pasir - TRIP 1 (400K)">
-                      Jeep Gumuk Pasir - TRIP 1 (400K)
-                    </option>
-                    <option value="Jeep Gumuk Pasir - TRIP 2 (600K)">
-                      Jeep Gumuk Pasir - TRIP 2 (600K)
-                    </option>
-                    <option value="Jeep Gumuk Pasir - TRIP 3 (800K)">
-                      Jeep Gumuk Pasir - TRIP 3 (800K)
-                    </option>
-                  </optgroup>
-
-                  <optgroup label="— Rafting & Aktivitas Lain —">
-                    <option value="Rafting Sungai Elo">
-                      Rafting Sungai Elo
-                    </option>
-                    <option value="Rafting Sungai Progo">
-                      Rafting Sungai Progo
-                    </option>
-                  </optgroup>
-
-                  <option value="Custom Tour/Destinasi Lain">
-                    Custom Tour/Destinasi Lain (Tulis di Catatan)
-                  </option>
-                </select>
-                <p
-                  id="selected-package-display"
-                  class="mt-2 text-sm text-green-600 font-semibold hidden"
-                >
-                  Anda memilih: <span class="font-bold"></span>
-                </p>
-              </div>
-
-              <div class="grid grid-cols-2 gap-4">
-                <div>
-                  <label
-                    for="tanggal-tour"
-                    class="block text-sm font-medium text-gray-700"
-                    >Tanggal Tour *</label
-                  >
-                  <input
-                    type="date"
-                    id="tanggal-tour"
-                    name="tanggal_tour"
-                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    for="jumlah-peserta"
-                    class="block text-sm font-medium text-gray-700"
-                    >Jumlah Peserta (Total Orang) *</label
-                  >
-                  <input
-                    type="number"
-                    id="jumlah-peserta"
-                    name="jumlah_peserta"
-                    placeholder="Cth: 4"
-                    min="1"
-                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  for="catatan"
-                  class="block text-sm font-medium text-gray-700"
-                  >Catatan Tambahan (Opsional)</label
-                >
-                <textarea
-                  id="catatan"
-                  name="catatan"
-                  rows="3"
-                  class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-orange-500 focus:border-orange-500"
-                  placeholder="Contoh: Kami ingin tour VW Borobudur start jam 08.00 pagi."
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                class="w-full bg-orange-600 text-white font-semibold py-3 rounded-md hover:bg-orange-700 transition"
-              >
-                Kirim Permintaan Booking
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Footer -->
     <footer id="contact" class="bg-gray-800 text-white py-8 rounded-t-xl">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2601,99 +2317,6 @@
     </div>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const bookingForm = document.getElementById("rental-booking-form");
-        const selectedPackageInput = document.getElementById(
-          "selected-package-input"
-        );
-        const paketTourSelect = document.getElementById("paket-tour");
-        const selectedPackageDisplay = document.getElementById(
-          "selected-package-display"
-        );
-        const bookButtons = document.querySelectorAll(".book-btn");
-
-        // --- 1. Fungsi Mengisi Form Otomatis ketika Tombol 'Pesan Sekarang' Diklik ---
-        bookButtons.forEach((button) => {
-          button.addEventListener("click", function () {
-            const packageName = this.getAttribute("data-package");
-
-            // Mengisi hidden input
-            selectedPackageInput.value = packageName;
-
-            // Mengisi dropdown (Jika opsi sudah ada, langsung pilih)
-            let foundOption = false;
-            for (let i = 0; i < paketTourSelect.options.length; i++) {
-              if (paketTourSelect.options[i].value === packageName) {
-                paketTourSelect.value = packageName;
-                foundOption = true;
-                break;
-              }
-            }
-
-            // Jika opsi tidak ditemukan (misalnya paket kustom), biarkan dropdown di default
-            if (!foundOption) {
-              paketTourSelect.value = packageName; // Set value untuk ditampilkan (tapi mungkin perlu opsi "Lainnya")
-            }
-
-            // Menampilkan nama paket yang dipilih
-            selectedPackageDisplay.querySelector("span").textContent =
-              packageName;
-            selectedPackageDisplay.classList.remove("hidden");
-
-            // Scroll ke Form Booking
-            document
-              .getElementById("booking-section")
-              .scrollIntoView({ behavior: "smooth" });
-          });
-        });
-
-        // --- 2. Fungsi Mengirimkan Data Form ke WhatsApp ---
-        bookingForm.addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          // Mengambil nilai dari form
-          const nama = document.getElementById("nama-booking").value;
-          const telp = document.getElementById("telp-wa").value;
-          const paketTour = document.getElementById("paket-tour").value;
-          const tanggalTour = document.getElementById("tanggal-tour").value;
-          const jumlahPeserta = document.getElementById("jumlah-peserta").value;
-          const catatan =
-            document.getElementById("catatan").value || "Tidak Ada";
-
-          // Format Tanggal (Opsional)
-          const dateObj = new Date(tanggalTour);
-          const formattedDate = dateObj.toLocaleDateString("id-ID", {
-            weekday: "long",
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          });
-
-          // Nomor WA Tujuan Munggur Travel
-          const phoneNumber = "628999008880"; // GANTI DENGAN NOMOR WA ASLI ANDA
-
-          // Membuat pesan WhatsApp
-          const message = `Halo Munggur Travel! Saya ingin melakukan Permintaan Booking Destinasi/Tour dengan detail sebagai berikut:
-
-          *DATA PEMESANAN*
-          Nama: ${nama}
-          No. Telp/WA: ${telp}
-
-          *DETAIL TOUR*
-          Paket Tour: ${paketTour}
-          Tanggal Tour: ${formattedDate}
-          Jumlah Peserta: ${jumlahPeserta} Orang
-          Catatan Tambahan: ${catatan}
-
-          Mohon konfirmasi ketersediaan paket dan total biaya. Terima kasih!`;
-
-          const encodedMessage = encodeURIComponent(message);
-          const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
-          // Buka link WhatsApp
-          window.open(whatsappUrl, "_blank");
-        });
-      });
       function openModal(modalId) {
         document.getElementById(modalId).classList.remove("hidden");
         document.getElementById(modalId).classList.add("flex");
@@ -2705,6 +2328,81 @@
       }
       // Nomor WhatsApp tujuan booking
       const WHATSAPP_NUMBER = "628999008880"; // Format internasional tanpa + atau 00
+
+      const packages = [
+        {
+          img: "./src/img/paket.png",
+          title: "Paket Candi Borobudur & Prambanan",
+          desc: "Jelajahi keajaiban candi dunia dengan pemandu ahli.",
+          price: "Rp 400.000",
+        },
+        {
+          img: "./src/img/paket.png",
+          title: "Paket Pantai Selatan",
+          desc: "Nikmati pasir putih dan ombak di pantai-pantai eksotis.",
+          price: "Rp 350.000",
+        },
+        {
+          img: "./src/img/paket.png",
+          title: "Paket Kota Yogyakarta",
+          desc: "Eksplorasi Malioboro, keraton, dan kuliner khas Jogja.",
+          price: "Rp 250.000",
+        },
+        {
+          img: "./src/img/paket.png",
+          title: "Paket Gunung Merapi",
+          desc: "Pendakian aman ke puncak gunung berapi aktif.",
+          price: "Rp 300.000",
+        },
+        {
+          img: "./src/img/paket.png",
+          title: "Paket Desa Wisata",
+          desc: "Kunjungi desa-desa tradisional dengan budaya autentik.",
+          price: "Rp 200.000",
+        },
+        {
+          img: "./src/img/paket.png",
+          title: "Paket Kuliner Jogja",
+          desc: "Rasakan cita rasa kuliner khas Yogyakarta.",
+          price: "Rp 150.000",
+        },
+        {
+          img: "./src/img/paket.png",
+          title: "Paket Seni dan Budaya",
+          desc: "Pelajari seni batik dan wayang kulit.",
+          price: "Rp 250.000",
+        },
+        {
+          img: "./src/img/paket.png",
+          title: "Paket Alam Liar",
+          desc: "Jelajahi hutan dan sungai di sekitar Jogja.",
+          price: "Rp 350.000",
+        },
+        {
+          img: "./src/img/paket.png",
+          title: "Paket Sejarah Jogja",
+          desc: "Kunjungi situs-situs bersejarah penting.",
+          price: "Rp 300.000",
+        },
+        {
+          img: "./src/img/paket.png",
+          title: "Paket Petualangan",
+          desc: "Aktivitas ekstrem seperti rafting dan paralayang.",
+          price: "Rp 450.000",
+        },
+        {
+          img: "./src/img/paket.png",
+          title: "Paket Keluarga",
+          desc: "Wisata ramah keluarga dengan berbagai aktivitas.",
+          price: "Rp 400.000",
+        },
+        {
+          img: "./src/img/paket.png",
+          title: "Paket Romantis",
+          desc: "Liburan spesial untuk pasangan.",
+          price: "Rp 500.000",
+        },
+      ];
 
       let currentIndex = 0;
       const packagesPerLoad = 6;
